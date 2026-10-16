@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TARA Sliced Chapter Specification",
+  "description": "三锚点反向装配法章节切分与训练元数据结构定义",
+  "type": "object",
+  "required": [
+    "chapter_id",
+    "chapter_title",
+    "chapter_outline",
+    "truth_base",
+    "ramp_up",
+    "climax",
+    "aftermath"
+  ],
+  "properties": {
+    "chapter_id": {
+      "type": "string",
+      "description": "章节唯一标识"
+    },
+    "chapter_title": {
+      "type": "string",
+      "description": "章节标题"
+    },
+    "chapter_outline": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "本章作者章纲核心要点列表"
+    },
+    "truth_base": {
+      "type": "object",
+      "required": ["protagonist_plan", "antagonist_horizon", "information_gap", "deadline"],
+      "description": "事实基座卡 (Truth Base Card)",
+      "properties": {
+        "protagonist_plan": {
+          "type": "string",
+          "description": "主角现实算盘：主角核心动机、利益底线与算计"
+        },
+        "antagonist_horizon": {
+          "type": "string",
+          "description": "配角本土视界：反派/对手合情合理的局限与误判认知"
+        },
+        "information_gap": {
+          "type": "string",
+          "description": "信息差护城河：主角掌握而对方不知的核心真相/底牌"
+        },
+        "deadline": {
+          "type": "string",
+          "description": "终局死线：迫使冲突在短时间内必须解决的外部紧迫压力"
+        }
+      }
+    },
+    "ramp_up": {
+      "type": "object",
+      "required": ["opening_state", "text", "target_anchor_sentence"],
+      "description": "前向倒推铺垫片段 (Ramp-up)",
+      "properties": {
+        "opening_state": {
+          "type": "string",
+          "description": "章节初始情境（承接上章）"
+        },
+        "target_anchor_sentence": {
+          "type": "string",
+          "description": "终点铁锚：必须咬入的高潮首句"
+        },
+        "text": {
+          "type": "string",
+          "description": "铺垫正文（约600-900字）"
+        },
+        "word_count": {
+          "type": "integer"
+        }
+      }
+    },
+    "climax": {
+      "type": "object",
+      "required": ["climax_start", "climax_end", "text", "core_conflict"],
+      "description": "核心高潮切片 (Climax Anchor)",
+      "properties": {
+        "climax_start": {
+          "type": "string",
+          "description": "高潮爆发首句 (铁锚1)"
+        },
+        "climax_end": {
+          "type": "string",
+          "description": "高潮平息末句 (铁锚2)"
+        },
+        "core_conflict": {
+          "type": "string",
+          "description": "最高峰对决形式（利益摊牌/武力反杀/言语将死）"
+        },
+        "text": {
+          "type": "string",
+          "description": "高潮正文（约600-800字）"
+        },
+        "word_count": {
+          "type": "integer"
+        }
+      }
+    },
+    "aftermath": {
+      "type": "object",
+      "required": ["from_anchor_sentence", "hook", "text"],
+      "description": "尾声余波推演片段 (Aftermath)",
+      "properties": {
+        "from_anchor_sentence": {
+          "type": "string",
+          "description": "起始铁锚：承接的高潮末句"
+        },
+        "hook": {
+          "type": "string",
+          "description": "章末留钩与断章悬念"
+        },
+        "text": {
+          "type": "string",
+          "description": "余波正文（约400-600字）"
+        },
+        "word_count": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# System files
+.DS_Store
+
+# Temporary outputs (keep sample raw & test dataset)
+data/sliced/*.tmp
+data/raw/*.txt
+!data/raw/sample_chapter.txt
