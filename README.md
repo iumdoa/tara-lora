@@ -40,8 +40,11 @@ lora/
 ├── prompts/
 │   └── extraction_prompts.py   # 逆向章节拆解 Prompt 模板
 ├── src/
-│   ├── segmenter.py            # 章节逆向切分核心脚本（支持 API 与本地离线演示）
-│   └── format_converter.py     # 转化为 LLaMA-Factory / ShareGPT 标准训练集
+│   ├── novel_splitter.py       # 小说分章工具（支持 .epub 电子书与 .txt 全本）
+│   ├── segmenter.py            # 章节逆向切分核心脚本（支持单章/批量 API 与本地演示）
+│   ├── format_converter.py     # 转化为 LLaMA-Factory / ShareGPT 标准训练集
+│   ├── train_lora_local.py     # 本地极速 LoRA/QLoRA 试训脚本 (适配 8GB 显存)
+│   └── infer_test.py           # 微调效果推理验证与锚点咬合测试
 └── data/
     ├── raw/                    # 原始章节文本输入
     ├── sliced/                 # 切分后的结构化 JSON 数据
@@ -62,19 +65,81 @@ lora/
 
 ---
 
-## 四、 快速上手与演示
+## 四、 快速上手与全流程命令
 
-不需要额外依赖，纯 Python 3 标准库即可运行：
+不需要第三方依赖，纯 Python 3 标准库即可运行：
 
 ```bash
-cd /home/iumdoa/Projects/lora
+cd /home/iumdoa/Project/lora
 
-# 1. 运行切分原型验证（内置高品质玄幻示例单章）
+# 1. 如果有整本小说 (.epub 或 .txt)，自动分章提取纯文本到 data/raw/
+python3 src/novel_splitter.py /path/to/novel.epub
+# 或者：python3 src/novel_splitter.py /path/to/novel.txt
+
+# 2. 逆向结构化拆解
+# 方式 A：体验内置高质量玄幻单章示例
 python3 src/segmenter.py --demo
 
-# 2. 将切分好的结构化数据转换为 LLaMA-Factory 标准训练集
+# 方式 B：指定 API 批量拆解 data/raw/ 下提取出的所有章节
+export LLM_API_KEY="your-api-key"
+python3 src/segmenter.py --dir data/raw/ --api-key $LLM_API_KEY --model deepseek-chat
+
+# 3. 将切分好的结构化数据转换为 LLaMA-Factory 标准训练集
 python3 src/format_converter.py
 
-# 3. 查看生成的训练样本
+# 4. 查看生成的训练样本
 cat data/dataset/tara_train_dataset.json | head -n 40
 ```
+
+---
+
+## 五、 本地极速微调与效果验证 (Pilot Run)
+
+针对本地 8GB 显存显卡（如 Quadro RTX 4000 / RTX 3070 / RTX 4060），使用 4-bit QLoRA 仅需 4GB 显存，10~15 分钟即可跑完 210 条样本：
+
+```bash
+# 1. 启动本地 LoRA 微调 (默认基座为 Qwen2.5-1.5B-Instruct)
+.venv/bin/python src/train_lora_local.py \
+  --epochs 3 \
+  --batch_size 1 \
+  --grad_accum 8 \
+  --learning_rate 2e-4
+
+# 2. 检验模型锚点咬合效果 (测试 tara_rampup 终点咬合)
+.venv/bin/python src/infer_test.py --task rampup
+
+# 3. 检验模型高潮爆发切片 (测试 tara_climax)
+.venv/bin/python src/infer_test.py --task climax
+```
+
+---
+
+## 六、 云端算力训练方案 (LLaMA-Factory 7B/14B)
+
+当本地验证数据闭环与格式收敛无误后，可将生成的训练集上传至云端（如 AutoDL / 阿里云 PAI 单卡 4090），执行全量工业级训练：
+
+1. 注册数据集：将 `data/dataset/dataset_info_snippet.json` 内容追加至 LLaMA-Factory 的 `dataset_info.json`。
+2. 启动训练：
+```bash
+llamafactory-cli train \
+    --stage sft \
+    --do_train \
+    --model_name_or_path Qwen/Qwen2.5-7B-Instruct \
+    --dataset tara_webnovel_sft \
+    --template qwen \
+    --finetuning_type lora \
+    --lora_target all \
+    --output_dir saves/qwen7b_tara_lora \
+    --overwrite_output_dir \
+    --cutoff_len 1536 \
+    --learning_rate 2e-4 \
+    --num_train_epochs 3.0 \
+    --per_device_train_batch_size 2 \
+    --gradient_accumulation_steps 4 \
+    --lr_scheduler_type cosine \
+    --logging_steps 10 \
+    --save_steps 50 \
+    --warmup_ratio 0.05 \
+    --fp16 True
+```
+

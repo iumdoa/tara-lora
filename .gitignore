@@ -13,7 +13,16 @@ ENV/
 # System files
 .DS_Store
 
+# Models and checkpoints
+models/
+output/
+
+# Books & Raw Novel Chapters (copyright & storage)
+*.epub
+processed_books/
+data/**/raw/*.txt
+data/raw/*.txt
+
 # Temporary outputs (keep sample raw & test dataset)
 data/sliced/*.tmp
-data/raw/*.txt
 !data/raw/sample_chapter.txt

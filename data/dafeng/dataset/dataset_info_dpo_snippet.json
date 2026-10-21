@@ -1,0 +1,12 @@
+{
+  "tara_style_dpo": {
+    "file_name": "tara_contrast_dpo.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  }
+}

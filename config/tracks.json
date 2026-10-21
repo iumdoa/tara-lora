@@ -1,0 +1,214 @@
+{
+  "quota_per_track": 10000,
+  "total_target_sft": 210000,
+  "tracks": [
+    {
+      "id": "T01",
+      "name": "凡人苟道 / 稳健长生流",
+      "category": "仙侠修真",
+      "features": "杀人夺宝、步步为营、算无遗策、底牌保留、因果戒律",
+      "assigned_books": [
+        {"alias": "fanren", "title": "凡人修仙传", "sft_count": 1170},
+        {"alias": "wenjian", "title": "我师兄实在太稳健了", "sft_count": 345}
+      ],
+      "current_sft": 1515,
+      "recommended_missing": ["《苟在妖武乱世修仙》(文抄公)", "《我有一个修仙世界》(纯九莲宝灯)"]
+    },
+    {
+      "id": "T02",
+      "name": "民俗志怪 / 诡异克苏鲁修仙",
+      "category": "仙侠修真",
+      "features": "认知扭曲、现实虚幻分裂、民俗禁忌仪式、克系异化",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《道诡异仙》(狐尾的笔)", "《黄昏分界》(黑山老鬼)", "《长生志异》(真愚老人)", "《俗主》(南腔北调)"]
+    },
+    {
+      "id": "T03",
+      "name": "家族宗门 / 群像残酷流",
+      "category": "仙侠修真",
+      "features": "去个人英雄主义、代际血脉传承、资源匮乏求存、宗族壮烈伏笔",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《玄鉴仙族》(季越人)", "《仙工开物》(蛊真人)", "《我本无意成仙》(金色茉莉花)"]
+    },
+    {
+      "id": "T04",
+      "name": "反套路 / 爆笑迪化仙侠",
+      "category": "仙侠修真",
+      "features": "解构传统修仙、主角脑回路清奇、全员脑补迪化、高频密集包袱",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《谁让他修仙的！》(最白的乌鸦)", "《我不可能是剑神》(裴不了)", "《我用闲书成圣人》(出走八万里)"]
+    },
+    {
+      "id": "T05",
+      "name": "传统玄幻 / 热血升级打脸流",
+      "category": "玄幻高武",
+      "features": "逆境反杀、三十年河东、境界压制、当众显圣、情绪大开大合",
+      "assigned_books": [
+        {"alias": "doupo", "title": "斗破苍穹", "sft_count": 755}
+      ],
+      "current_sft": 755,
+      "recommended_missing": ["《万世之名》(古羲)", "《赤心巡天》(情何以甚)"]
+    },
+    {
+      "id": "T06",
+      "name": "现代高武 / 灵气复苏万族流",
+      "category": "玄幻高武",
+      "features": "高考武科、地窟前线、家国情怀、热血军武战阵",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《高武纪元》(烽仙)", "《渊天尊》(烽仙)", "《神话纪元，我进化成了恒星级巨兽》(群玉山头见)"]
+    },
+    {
+      "id": "T07",
+      "name": "极道加点 / 肌肉蛮霸横推流",
+      "category": "玄幻高武",
+      "features": "深蓝加点、绝对肉身蛮力、横推神鬼、杀伐果断暴力美学",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《从斩妖除魔开始长生不死》(陆月十九)", "《道爷要飞升》(裴屠狗)", "《极道天魔》(滚开)"]
+    },
+    {
+      "id": "T08",
+      "name": "西幻序列 / 密教扮演流",
+      "category": "奇幻西幻",
+      "features": "序列魔药途径、扮演法消化、仪式神秘学、维多利亚时代风貌",
+      "assigned_books": [
+        {"alias": "guimi", "title": "诡秘之主", "sft_count": 675}
+      ],
+      "current_sft": 675,
+      "recommended_missing": ["《宿命之环》(爱潜水的乌贼)", "《国王》(新海月1)"]
+    },
+    {
+      "id": "T09",
+      "name": "领地建设 / 异界工业种田流",
+      "category": "奇幻西幻",
+      "features": "异界工业革命、攀科技树、魔导科技化、制度与生产力重构",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《黎明之剑》(远瞳)", "《放开那个女巫》(二目)"]
+    },
+    {
+      "id": "T10",
+      "name": "规则怪谈 / 绝望解密流",
+      "category": "悬疑惊悚",
+      "features": "鬼无法被杀死、规律洞察、绝望死局逻辑求生、冷酷心理博弈",
+      "assigned_books": [
+        {"alias": "shenmi", "title": "神秘复苏", "sft_count": 750}
+      ],
+      "current_sft": 750,
+      "recommended_missing": ["《地狱公寓》(黑色火种)", "《从红月开始》(黑山老鬼)"]
+    },
+    {
+      "id": "T11",
+      "name": "惊悚探险 / 密室系统经营流",
+      "category": "悬疑惊悚",
+      "features": "古墓机关风水、凶宅探案试炼、心跳反差幽默、恐怖道具经营",
+      "assigned_books": [
+        {"alias": "daomu", "title": "盗墓笔记", "sft_count": 265},
+        {"alias": "maoxianwu", "title": "我有一座冒险屋", "sft_count": 360}
+      ],
+      "current_sft": 625,
+      "recommended_missing": ["《我的治愈系游戏》(我会修空调)", "《深夜书屋》(纯洁滴小龙)"]
+    },
+    {
+      "id": "T12",
+      "name": "重生创业 / 年代商战流",
+      "category": "都市现实",
+      "features": "时代浪潮掘金、信息差降维、修罗场情感拉扯、江湖世故人情",
+      "assigned_books": [
+        {"alias": "chongsheng", "title": "我真没想重生啊", "sft_count": 520}
+      ],
+      "current_sft": 520,
+      "recommended_missing": ["《重回1982小渔村》(米饭的米)", "《重生之出人头地》(闹闹不爱哭)"]
+    },
+    {
+      "id": "T13",
+      "name": "硬核行业 / 职业白描流",
+      "category": "都市现实",
+      "features": "专业壁垒打破、手术室/法医刑侦严谨白描、凡尔赛技术装逼",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《大医凌然》(志鸟村)", "《国民法医》(志鸟村)", "《当医生开了外挂》(手握寸关尺)"]
+    },
+    {
+      "id": "T14",
+      "name": "都市异能 / 吐槽搞怪流",
+      "category": "都市现实",
+      "features": "收集负面情绪、毒舌嘴贱、现代都市超能觉醒、爆笑反差日常",
+      "assigned_books": [
+        {"alias": "dawang", "title": "大王饶命", "sft_count": 630}
+      ],
+      "current_sft": 630,
+      "recommended_missing": ["《我的超能力每周刷新》(一片雪饼)", "《不许没收我的人籍》(可怜的夕夕)"]
+    },
+    {
+      "id": "T15",
+      "name": "乱世军阀 / 铁血争霸流",
+      "category": "历史军事",
+      "features": "汉末隋末乱世开局、沙盘军阵战法、武将枭雄对决、豪迈军纪与英雄气",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《覆汉》(榴弹怕水)", "《黜龙》(榴弹怕水)", "《晋末长剑》(孤独麦客)"]
+    },
+    {
+      "id": "T16",
+      "name": "考据内政 / 制度改革流",
+      "category": "历史军事",
+      "features": "两宋晚明制度考据、皇帝与权臣过招、财政官制革新、现代意识撞击皇权",
+      "assigned_books": [
+        {"alias": "shaosong", "title": "绍宋", "sft_count": 200},
+        {"alias": "dafeng", "title": "大奉打更人", "sft_count": 440}
+      ],
+      "current_sft": 640,
+      "recommended_missing": ["《北宋穿越指南》(王梓钧)", "《满唐华彩》(怪诞的表哥)", "《大明国师》(西湖遇雨)", "《万历明君》(鹤招)"]
+    },
+    {
+      "id": "T17",
+      "name": "赛博朋克 / 双界穿梭流",
+      "category": "科幻末世",
+      "features": "财阀垄断赛博、义体改造与武道、现实与虚拟/异世界双重博弈",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《夜的命名术》(会说话的肘子)", "《赛博英雄传》(吾道长不孤)"]
+    },
+    {
+      "id": "T18",
+      "name": "硬核科技 / 学霸工业流",
+      "category": "科幻末世",
+      "features": "科学猜想证明、高端制造受限突破、冷核聚变、跨时空科技俱乐部",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《天才俱乐部》(城城与蝉)", "《学霸的黑科技系统》(晨星LL)", "《最终神职》(拓跋狗蛋)"]
+    },
+    {
+      "id": "T19",
+      "name": "第四天灾 / 反向背刺流",
+      "category": "游戏二次元",
+      "features": "召唤现代沙雕玩家当苦力、反向投资一心亏钱被全员背刺疯狂盈利",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《亏成首富从游戏开始》(青衫取醉)", "《这游戏也太真实了》(晨星LL)", "《地下城玩家》(蓝白的天)", "《说好制作烂游戏，泰坦陨落什么鬼》(布洛芬战士)"]
+    },
+    {
+      "id": "T20",
+      "name": "诸天无限 / 独狼乐园流",
+      "category": "游戏二次元",
+      "features": "空间乐园试炼、独狼近战斩击、万界副本攻略、冷酷力量成长",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《从姑获鸟开始》(活儿该)", "《轮回乐园》(那一只蚊子)", "《超神机械师》(齐佩甲)"]
+    },
+    {
+      "id": "T21",
+      "name": "原生轻小说 / 恋爱修罗场流",
+      "category": "游戏二次元",
+      "features": "微表情心理拉扯、嘴硬傲娇、异界羁绊与修罗场、青春情感轻喜剧",
+      "assigned_books": [],
+      "current_sft": 0,
+      "recommended_missing": ["《都重生了谁谈恋爱啊》(错哪儿了)", "《术师手册》(听日)", "《我的女友是恶劣大小姐》(李童)"]
+    }
+  ]
+}

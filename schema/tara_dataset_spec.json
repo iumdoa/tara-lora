@@ -1,16 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "TARA Sliced Chapter Specification",
-  "description": "三锚点反向装配法章节切分与训练元数据结构定义",
+  "title": "TARA-5 Sliced Chapter & Style Contrast Specification",
+  "description": "五段式全闭环反向装配与AI/真人文风对比数据集规范 (TARA-5)",
   "type": "object",
   "required": [
     "chapter_id",
     "chapter_title",
+    "prev_chapter_ending",
     "chapter_outline",
     "truth_base",
-    "ramp_up",
-    "climax",
-    "aftermath"
+    "segments"
   ],
   "properties": {
     "chapter_id": {
@@ -20,6 +19,14 @@
     "chapter_title": {
       "type": "string",
       "description": "章节标题"
+    },
+    "chapter_index": {
+      "type": "integer",
+      "description": "章节在全书中的绝对序号"
+    },
+    "prev_chapter_ending": {
+      "type": "string",
+      "description": "上一章末尾的断章文本（本章破题衔接的依据）"
     },
     "chapter_outline": {
       "type": "array",
@@ -31,92 +38,51 @@
       "required": ["protagonist_plan", "antagonist_horizon", "information_gap", "deadline"],
       "description": "事实基座卡 (Truth Base Card)",
       "properties": {
-        "protagonist_plan": {
-          "type": "string",
-          "description": "主角现实算盘：主角核心动机、利益底线与算计"
+        "protagonist_plan": { "type": "string", "description": "主角现实算盘：动机与利益底线" },
+        "antagonist_horizon": { "type": "string", "description": "配角本土视界：反派/对手的认知局限与误判" },
+        "information_gap": { "type": "string", "description": "信息差护城河：主角掌握的核心底牌" },
+        "deadline": { "type": "string", "description": "终局死线：迫使冲突爆发的倒计时压力" }
+      }
+    },
+    "segments": {
+      "type": "object",
+      "required": ["opening", "ramp_up", "climax", "aftershock", "cliffhanger"],
+      "description": "五段式结构切片 (三核双桥)",
+      "properties": {
+        "opening": {
+          "type": "object",
+          "required": ["anchor_start", "anchor_end", "text"],
+          "description": "1. 破题切片（黄金三秒开门见山，承接上一章末尾）"
         },
-        "antagonist_horizon": {
-          "type": "string",
-          "description": "配角本土视界：反派/对手合情合理的局限与误判认知"
+        "ramp_up": {
+          "type": "object",
+          "required": ["anchor_start", "anchor_end", "text"],
+          "description": "2. 前向蓄水引信桥（连接破题末句至高潮首句）"
         },
-        "information_gap": {
-          "type": "string",
-          "description": "信息差护城河：主角掌握而对方不知的核心真相/底牌"
+        "climax": {
+          "type": "object",
+          "required": ["core_conflict", "anchor_start", "anchor_end", "text"],
+          "description": "3. 高潮核爆切片（信息差兑现，物理反杀与利益摊牌）"
         },
-        "deadline": {
-          "type": "string",
-          "description": "终局死线：迫使冲突在短时间内必须解决的外部紧迫压力"
+        "aftershock": {
+          "type": "object",
+          "required": ["anchor_start", "anchor_end", "text"],
+          "description": "4. 余波转折中继桥（战后喘息，搜刮复盘，连接高潮末句至断章首句）"
+        },
+        "cliffhanger": {
+          "type": "object",
+          "required": ["anchor_start", "anchor_end", "text"],
+          "description": "5. 致命断章切片（新危机突降，全章刀锋卡点）"
         }
       }
     },
-    "ramp_up": {
+    "contrast": {
       "type": "object",
-      "required": ["opening_state", "text", "target_anchor_sentence"],
-      "description": "前向倒推铺垫片段 (Ramp-up)",
+      "description": "AI初稿与真人原著文风对比对 (用于 DPO 偏好对齐)",
       "properties": {
-        "opening_state": {
-          "type": "string",
-          "description": "章节初始情境（承接上章）"
-        },
-        "target_anchor_sentence": {
-          "type": "string",
-          "description": "终点铁锚：必须咬入的高潮首句"
-        },
-        "text": {
-          "type": "string",
-          "description": "铺垫正文（约600-900字）"
-        },
-        "word_count": {
-          "type": "integer"
-        }
-      }
-    },
-    "climax": {
-      "type": "object",
-      "required": ["climax_start", "climax_end", "text", "core_conflict"],
-      "description": "核心高潮切片 (Climax Anchor)",
-      "properties": {
-        "climax_start": {
-          "type": "string",
-          "description": "高潮爆发首句 (铁锚1)"
-        },
-        "climax_end": {
-          "type": "string",
-          "description": "高潮平息末句 (铁锚2)"
-        },
-        "core_conflict": {
-          "type": "string",
-          "description": "最高峰对决形式（利益摊牌/武力反杀/言语将死）"
-        },
-        "text": {
-          "type": "string",
-          "description": "高潮正文（约600-800字）"
-        },
-        "word_count": {
-          "type": "integer"
-        }
-      }
-    },
-    "aftermath": {
-      "type": "object",
-      "required": ["from_anchor_sentence", "hook", "text"],
-      "description": "尾声余波推演片段 (Aftermath)",
-      "properties": {
-        "from_anchor_sentence": {
-          "type": "string",
-          "description": "起始铁锚：承接的高潮末句"
-        },
-        "hook": {
-          "type": "string",
-          "description": "章末留钩与断章悬念"
-        },
-        "text": {
-          "type": "string",
-          "description": "余波正文（约400-600字）"
-        },
-        "word_count": {
-          "type": "integer"
-        }
+        "ai_draft": { "type": "string", "description": "AI由章纲盲写出的平庸初稿 (Rejected)" },
+        "human_original": { "type": "string", "description": "真人作家写的原著正文 (Chosen)" },
+        "style_critique": { "type": "string", "description": "文风批判反思与AI味诊断" }
       }
     }
   }
