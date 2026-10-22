@@ -272,14 +272,14 @@ def extract_chapters_from_txt(txt_path: Path, output_dir: Path) -> list:
     with open(txt_path, "r", encoding="utf-8", errors="ignore") as f:
         content = f.read()
 
-    # 常用网文章节标题正则
+    # 常用网文章节标题正则（全面覆盖大写数字零/两、阿拉伯数字与标准网文章节格式）
     pattern = re.compile(
-        r'(^\s*(?:第[0-9一二三四五六七八九十百千万]+[章回卷节篇集]|Chapter\s*\d+|[0-9]{1,4}\s+).*$)',
+        r'(^\s*(?:第[0-9一二三四五六七八九十百千万零两]+[章回卷节篇集]|Chapter\s*\d+).*$)',
         re.MULTILINE
     )
 
-    matches = list(pattern.finditer(content))
-    if not matches:
+    all_matches = list(pattern.finditer(content))
+    if not all_matches:
         # 如果未匹配到明确章节名，尝试按字数分块（每 2500 字一块）
         print("[!] 未检测到标准章节标题正则，按 2500 字定长切片模式兜底...")
         chunk_size = 2500
@@ -293,17 +293,27 @@ def extract_chapters_from_txt(txt_path: Path, output_dir: Path) -> list:
             extracted_files.append((idx, f"片段_{idx}", len(chunk), target_path))
         return extracted_files
 
+    # 过滤单行作者公告/请假/月票等非章节噪音
+    skip_keywords = ['求月票', '更新计划', '更完毕', '被审核', '万订啦', '已修改']
+    valid_matches = []
+    for m in all_matches:
+        t = m.group(1).strip()
+        if any(k in t for k in skip_keywords):
+            continue
+        valid_matches.append(m)
+
     extracted_files = []
-    for i, match in enumerate(matches):
+    chapter_idx = 1
+    for i, match in enumerate(valid_matches):
         title = match.group(1).strip()
         start_pos = match.start()
-        end_pos = matches[i + 1].start() if i + 1 < len(matches) else len(content)
+        end_pos = valid_matches[i + 1].start() if i + 1 < len(valid_matches) else len(content)
         
         chapter_body = content[start_pos:end_pos].strip()
-        if len(chapter_body) < 100:
+        # 过滤不足 300 字的极短非正文碎块
+        if len(chapter_body) < 300:
             continue
 
-        chapter_idx = i + 1
         safe_title = sanitize_filename(title)
         filename = f"ch_{chapter_idx:04d}_{safe_title}.txt"
         target_path = output_dir / filename
@@ -312,6 +322,7 @@ def extract_chapters_from_txt(txt_path: Path, output_dir: Path) -> list:
             out_f.write(chapter_body)
 
         extracted_files.append((chapter_idx, safe_title, len(chapter_body), target_path))
+        chapter_idx += 1
 
     return extracted_files
 
