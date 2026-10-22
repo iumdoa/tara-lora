@@ -27,14 +27,19 @@
           "alias": "xiuxian",
           "title": "我有一个修仙世界",
           "sft_count": 710
+        },
+        {
+          "alias": "yaowu",
+          "title": "苟在妖武乱世修仙",
+          "sft_count": 535
         }
       ],
-      "current_sft": 2845,
+      "current_sft": 3380,
       "recommended_missing": [
-        "《苟在妖武乱世修仙》(文抄公)",
         "《我的模拟长生路》(愤怒的乌贼)",
         "《仙逆》(耳根)",
-        "《仙者》(忘语)"
+        "《仙者》(忘语)",
+        "《百炼成仙》(幻雨)"
       ],
       "target_books_count": 15,
       "all_15_books": [

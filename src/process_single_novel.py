@@ -42,6 +42,7 @@ def get_book_alias(filename: str) -> str:
         "盗墓笔记": "daomu",
         "苟在初圣魔门当人材": "momen",
         "我有一个修仙世界": "xiuxian",
+        "苟在妖武乱世修仙": "yaowu",
     }
     for k, v in alias_map.items():
         if k in filename:
