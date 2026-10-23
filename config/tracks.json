@@ -32,14 +32,34 @@
           "alias": "yaowu",
           "title": "苟在妖武乱世修仙",
           "sft_count": 535
+        },
+        {
+          "alias": "changsheng",
+          "title": "我的模拟长生路",
+          "sft_count": 865
+        },
+        {
+          "alias": "xianni",
+          "title": "仙逆",
+          "sft_count": 1040
+        },
+        {
+          "alias": "xianzhe",
+          "title": "仙者",
+          "sft_count": 535
+        },
+        {
+          "alias": "bailian",
+          "title": "百炼成仙",
+          "sft_count": 2110
         }
       ],
-      "current_sft": 3380,
+      "current_sft": 7930,
       "recommended_missing": [
-        "《我的模拟长生路》(愤怒的乌贼)",
-        "《仙逆》(耳根)",
-        "《仙者》(忘语)",
-        "《百炼成仙》(幻雨)"
+        "《魔门败类》(惊涛骇浪)",
+        "《凡人修仙之仙界篇》(忘语)",
+        "《觅仙路》(何不语)",
+        "《紫府仙缘》(百里玺)"
       ],
       "target_books_count": 15,
       "all_15_books": [

@@ -1,0 +1,10 @@
+{
+  "tara5_action_v1_all": {
+    "file_name": "tara5_action_v1_all_train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+  }
+}

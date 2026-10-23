@@ -1,0 +1,295 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TARA-5 Action-Oriented Chapter Specification (v1)",
+  "description": "TARA-5 行动与状态驱动的五段式全闭环反向装配数据协议规范 (tara5_action_v1)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "chapter_id",
+    "source_novel",
+    "chapter_title",
+    "chapter_outline",
+    "confirmed_facts",
+    "characters",
+    "stage_plans",
+    "constraints",
+    "segments",
+    "annotation_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["tara5_action_v1"],
+      "description": "数据协议版本号"
+    },
+    "chapter_id": {
+      "type": "string",
+      "description": "章节唯一标识符，格式如 ch_0001"
+    },
+    "source_novel": {
+      "type": "string",
+      "description": "书目名称或别名"
+    },
+    "source_info": {
+      "type": "object",
+      "properties": {
+        "book_title": { "type": "string" },
+        "author": { "type": "string" },
+        "volume_title": { "type": "string" },
+        "chapter_index": { "type": "integer" },
+        "raw_file_name": { "type": "string" },
+        "raw_text_char_count": { "type": "integer" }
+      }
+    },
+    "chapter_title": {
+      "type": "string",
+      "description": "章节标题"
+    },
+    "prev_chapter_ending": {
+      "type": "string",
+      "description": "上一章末尾断章文本（本章开篇承接依据）"
+    },
+    "chapter_outline": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "章节目标及故事事件的阅读顺序总章纲"
+    },
+    "confirmed_facts": {
+      "type": "array",
+      "description": "本章开始前已确认存在的事实及证据出处（与计划要发生的事严格区分）",
+      "items": {
+        "type": "object",
+        "required": ["fact", "evidence"],
+        "properties": {
+          "fact": { "type": "string", "description": "已知既定事实" },
+          "evidence": { "type": "string", "description": "前文事实出处或依据" }
+        }
+      }
+    },
+    "characters": {
+      "type": "array",
+      "description": "本章登场角色的稳定 ID、状态、目标与认知视界",
+      "items": {
+        "type": "object",
+        "required": ["character_id", "name", "goal"],
+        "properties": {
+          "character_id": { "type": "string" },
+          "name": { "type": "string" },
+          "goal": { "type": "string", "description": "角色的即时现实算盘或行动目标" },
+          "known_info": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "该角色当前已掌握的真实信息"
+          },
+          "unknown_info": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "该角色尚不知晓的关键信息（构成信息差）"
+          },
+          "misjudgment": {
+            "type": "string",
+            "description": "该角色的主观误判或视界盲区"
+          }
+        }
+      }
+    },
+    "stage_plans": {
+      "type": "object",
+      "description": "五段各自的职责、前置条件、行动链、起止状态和篇幅预算",
+      "required": ["opening", "ramp_up", "climax", "aftershock", "cliffhanger"],
+      "properties": {
+        "opening": { "$ref": "#/definitions/stage_plan" },
+        "ramp_up": { "$ref": "#/definitions/stage_plan" },
+        "climax": { "$ref": "#/definitions/stage_plan" },
+        "aftershock": { "$ref": "#/definitions/stage_plan" },
+        "cliffhanger": { "$ref": "#/definitions/stage_plan" }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "description": "微调 Writer 的创作边界与约束",
+      "required": ["pov", "negative_constraints", "allowed_creative_freedom"],
+      "properties": {
+        "pov": {
+          "type": "string",
+          "description": "叙事视角（如：第三人称主角限制视角）"
+        },
+        "author_hard_requirements": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "作者硬性写作要求"
+        },
+        "negative_constraints": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "严格禁止新增的角色、改变的结果、突兀引入的战力或颠覆设定"
+        },
+        "allowed_creative_freedom": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "允许自由发挥的描写维度（如：打斗动词细节、心理白描、对话语感、气氛渲染）"
+        }
+      }
+    },
+    "segments": {
+      "type": "object",
+      "description": "五段式正文切片与原文精确首尾锚点",
+      "required": ["opening", "ramp_up", "climax", "aftershock", "cliffhanger"],
+      "properties": {
+        "opening": { "$ref": "#/definitions/segment" },
+        "ramp_up": { "$ref": "#/definitions/segment" },
+        "climax": { "$ref": "#/definitions/segment" },
+        "aftershock": { "$ref": "#/definitions/segment" },
+        "cliffhanger": { "$ref": "#/definitions/segment" }
+      }
+    },
+    "annotation_status": {
+      "type": "object",
+      "description": "标注质量与人工复核状态",
+      "required": ["needs_review"],
+      "properties": {
+        "needs_review": {
+          "type": "boolean",
+          "description": "是否存在无法从原文可靠确定、推测生成或未完全核实的项目"
+        },
+        "direct_evidence_fields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "有原文直接证据强支撑的字段列表"
+        },
+        "review_items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "reason"],
+            "properties": {
+              "field": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          },
+          "description": "需人工介入复核的疑点清单"
+        },
+        "annotator": {
+          "type": "string",
+          "description": "标注产生源（如: mytha_pipeline, human, rule_migrated）"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "stage_plan": {
+      "type": "object",
+      "required": [
+        "stage_name",
+        "responsibility",
+        "preconditions",
+        "target_outcome",
+        "length_budget",
+        "start_state",
+        "end_state",
+        "action_chain"
+      ],
+      "properties": {
+        "stage_name": {
+          "type": "string",
+          "enum": ["opening", "ramp_up", "climax", "aftershock", "cliffhanger"]
+        },
+        "responsibility": {
+          "type": "string",
+          "description": "该阶段文学工程职责"
+        },
+        "preconditions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "该阶段开始时按计划应已满足的前置态势"
+        },
+        "target_outcome": {
+          "type": "string",
+          "description": "该阶段必须达成的结果"
+        },
+        "length_budget": {
+          "type": "object",
+          "required": ["min_chars", "max_chars"],
+          "properties": {
+            "min_chars": { "type": "integer" },
+            "max_chars": { "type": "integer" }
+          }
+        },
+        "start_state": { "$ref": "#/definitions/narrative_state" },
+        "end_state": { "$ref": "#/definitions/narrative_state" },
+        "action_chain": {
+          "type": "array",
+          "description": "该阶段推进的细粒度行动单元链",
+          "items": { "$ref": "#/definitions/action_unit" }
+        }
+      }
+    },
+    "narrative_state": {
+      "type": "object",
+      "description": "阶段起止时的相关人物位置、姿态、持有物、伤势与认知变化（不强制无关字段）",
+      "properties": {
+        "character_positions": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "character_stances": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "held_items": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "injuries": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "cognitive_changes": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "action_unit": {
+      "type": "object",
+      "required": ["action_id", "actor_id", "action", "result"],
+      "properties": {
+        "action_id": { "type": "string" },
+        "actor_id": { "type": "string" },
+        "trigger": { "type": "string", "description": "触发条件" },
+        "action": { "type": "string", "description": "具体行动描述" },
+        "reason": { "type": "string", "description": "采取行动的认知依据或动机" },
+        "reaction": { "type": "string", "description": "其他人物或环境的即时反应" },
+        "result": { "type": "string", "description": "行动造成的直接结果" },
+        "depends_on": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "依赖的前序 action_id"
+        },
+        "evidence": { "type": "string", "description": "原文依据或出处片段" }
+      }
+    },
+    "segment": {
+      "type": "object",
+      "required": ["anchor_start", "anchor_end", "text"],
+      "properties": {
+        "anchor_start": {
+          "type": "string",
+          "description": "该片段第一句话，必须在原文一字不差精确存在"
+        },
+        "anchor_end": {
+          "type": "string",
+          "description": "该片段最后一句话，必须在原文一字不差精确存在"
+        },
+        "text": {
+          "type": "string",
+          "description": "人类原著正文（绝非AI编造）"
+        },
+        "char_count": { "type": "integer" },
+        "raw_char_offset_start": { "type": "integer" },
+        "raw_char_offset_end": { "type": "integer" }
+      }
+    }
+  }
+}

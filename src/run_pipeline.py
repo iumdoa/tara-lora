@@ -46,7 +46,11 @@ def main():
     parser.add_argument("--limit", type=int, default=0, help="处理章节数量 (0为全量)")
     parser.add_argument("--sample-by-volume", type=float, default=0.0, help="按大卷抽样比例 (如 0.1 代表每卷抽取 10 百分比)")
     parser.add_argument("--skip-dpo", action="store_true", help="跳过 DPO 对比构建")
+    parser.add_argument("--use-opencode", action="store_true", help="使用 OpenCode Go DeepSeek-V4.1-Flash (消耗 OpenCode 额度)")
     args = parser.parse_args()
+
+    if args.use_opencode:
+        os.environ["OPENCODE_USE_CLI"] = "1"
 
     raw_dir = Path(args.raw_dir)
     sliced_dir = Path(args.sliced_dir)

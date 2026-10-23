@@ -36,7 +36,20 @@ from prompts.extraction_prompts import AI_DRAFT_USER_TEMPLATE
 
 
 def call_deepseek_api(user_prompt: str, api_key: str, base_url: str = "https://api.deepseek.com/v1", model: str = "deepseek-flash") -> str:
-    """调用 DeepSeek API 生成 AI 初稿"""
+    """调用 API 生成 AI 初稿 (支持 DeepSeek 与 OpenCode)"""
+    if os.environ.get("OPENCODE_USE_CLI") == "1" or api_key == "opencode" or model.startswith("opencode-go/"):
+        import subprocess, random
+        full_input = f"你是一位网络小说作家，请根据给定的章节大纲与上一章结尾承接，撰写本章核心正文（篇幅约 1500~2000 字）。\n\n【极其重要】你必须直接生成小说正文文本，严禁调用任何外部工具或命令行（禁止 bash、禁止写文件）！\n\n{user_prompt}"
+        cmd = ["opencode", "run", "--pure", "--dir", "/tmp", "-m", "opencode-go/deepseek-v4.1-flash", full_input]
+        for attempt in range(4):
+            time.sleep(random.uniform(0.1, 0.4))
+            res = subprocess.run(cmd, capture_output=True, text=True)
+            out = res.stdout.strip()
+            if res.returncode == 0 and out:
+                return out
+            time.sleep(1.0 + attempt)
+        raise RuntimeError(f"OpenCode CLI call failed after 4 retries")
+
     url = f"{base_url.rstrip('/')}/chat/completions"
     headers = {
         "Content-Type": "application/json",
@@ -49,9 +62,10 @@ def call_deepseek_api(user_prompt: str, api_key: str, base_url: str = "https://a
             {"role": "user", "content": user_prompt}
         ],
         "temperature": 0.8,
-        "max_tokens": 2500,
-        "thinking": {"type": "disabled"}
+        "max_tokens": 2500
     }
+    if "deepseek.com" in base_url:
+        payload["thinking"] = {"type": "disabled"}
     req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=180) as response:
@@ -143,20 +157,26 @@ def process_contrast_for_chapter(json_path: Path, raw_dir: Path, api_key: str, b
 
 
 def main():
+    use_opencode_cli = os.environ.get("OPENCODE_USE_CLI") == "1"
+    default_api_key = "opencode" if use_opencode_cli else (os.environ.get("OPENCODE_API_KEY") or os.environ.get("DEEPSEEK_API_KEY", ""))
+    is_opencode = bool(os.environ.get("OPENCODE_API_KEY")) or use_opencode_cli
+    default_base_url = os.environ.get("OPENCODE_BASE_URL", "https://opencode.ai/inference/go/openai/v1" if is_opencode else os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1"))
+    default_model = os.environ.get("OPENCODE_MODEL", "opencode-go/deepseek-v4.1-flash" if use_opencode_cli else ("deepseek-v4.1-flash" if is_opencode else "deepseek-flash"))
+
     parser = argparse.ArgumentParser(description="TARA-5 AI与原著文风对比数据集构建器")
     parser.add_argument("--sliced-dir", type=str, default="data/sliced", help="切分文件目录")
     parser.add_argument("--raw-dir", type=str, default="data/raw", help="原始章节目录")
     parser.add_argument("--output", type=str, default="data/dataset/tara_contrast_dpo.json", help="输出 DPO 数据集路径")
-    parser.add_argument("--api-key", type=str, default=os.environ.get("DEEPSEEK_API_KEY", ""), help="DeepSeek API 密钥")
-    parser.add_argument("--base-url", type=str, default="https://api.deepseek.com/v1", help="API 地址")
-    parser.add_argument("--model", type=str, default="deepseek-flash", help="生成草稿所用的模型 (默认 deepseek-flash 即 DeepSeek-V4.1-Flash)")
+    parser.add_argument("--api-key", type=str, default=default_api_key, help="API 密钥 (支持 OPENCODE_API_KEY 或 DEEPSEEK_API_KEY)")
+    parser.add_argument("--base-url", type=str, default=default_base_url, help="API 地址")
+    parser.add_argument("--model", type=str, default=default_model, help="生成草稿所用的模型")
     parser.add_argument("--threads", type=int, default=5, help="并发线程数")
     parser.add_argument("--limit", type=int, default=0, help="限制处理的章节数量 (0为全部)")
     args = parser.parse_args()
 
     if not args.api_key:
-        print("[-] 错误：未指定 DeepSeek API Key！")
-        print("    请设置环境变量 export DEEPSEEK_API_KEY='sk-...' 或通过 --api-key 传入。")
+        print("[-] 错误：未指定 API Key！")
+        print("    请在 .env 中设置 OPENCODE_API_KEY / DEEPSEEK_API_KEY，或通过 --api-key 传入。")
         sys.exit(1)
 
     sliced_dir = Path(args.sliced_dir)

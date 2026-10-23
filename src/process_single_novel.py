@@ -43,6 +43,12 @@ def get_book_alias(filename: str) -> str:
         "苟在初圣魔门当人材": "momen",
         "我有一个修仙世界": "xiuxian",
         "苟在妖武乱世修仙": "yaowu",
+        "我的模拟长生路": "changsheng",
+        "仙逆": "xianni",
+        "仙者": "xianzhe",
+        "百炼成仙": "bailian",
+        "仙界篇": "xianjie",
+        "紫府仙缘": "zifu",
     }
     for k, v in alias_map.items():
         if k in filename:
@@ -86,7 +92,7 @@ def update_tracks_registry(alias: str, book_filename: str, dataset_dir: Path):
         for track in cfg.get("tracks", []):
             all_books = track.get("all_15_books", [])
             for b in all_books:
-                if clean_title in b or any(k in b for k in ["苟在初圣魔门当人材"] if k in clean_title):
+                if clean_title in b or ("仙界篇" in clean_title and "仙界篇" in b) or any(k in b for k in ["苟在初圣魔门当人材"] if k in clean_title):
                     assigned = track.setdefault("assigned_books", [])
                     found_existing = False
                     for ab in assigned:
@@ -123,6 +129,7 @@ def main():
     parser.add_argument("--alias", type=str, default="", help="别名/存储目录名 (默认自动识别)")
     parser.add_argument("--ratio", type=float, default=0.1, help="分卷抽样比例 (默认 0.1)")
     parser.add_argument("--threads", type=int, default=5, help="并发线程数 (默认 5)")
+    parser.add_argument("--use-opencode", action="store_true", help="使用 OpenCode Go 额度调用 DeepSeek")
     args = parser.parse_args()
 
     book_path = Path(args.book_file)
@@ -159,6 +166,8 @@ def main():
         "--sample-by-volume", str(args.ratio),
         "--threads", str(args.threads)
     ]
+    if args.use_opencode:
+        cmd_pipeline.append("--use-opencode")
     run_cmd(cmd_pipeline, f"2/4 10% 大卷抽样切片与 DPO/SFT 编译")
 
     # 3. 聚合进全局网文体系总库 (merge_datasets.py)

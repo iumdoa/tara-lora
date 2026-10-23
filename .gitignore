@@ -19,6 +19,7 @@ output/
 
 # Books & Raw Novel Chapters (copyright & storage)
 *.epub
+/*.txt
 processed_books/
 data/**/raw/*.txt
 data/raw/*.txt

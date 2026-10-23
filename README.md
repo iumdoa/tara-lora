@@ -131,7 +131,7 @@ llamafactory-cli train \
     --lora_target all \
     --output_dir saves/qwen7b_tara_lora \
     --overwrite_output_dir \
-    --cutoff_len 1536 \
+    --cutoff_len 2560 \
     --learning_rate 2e-4 \
     --num_train_epochs 3.0 \
     --per_device_train_batch_size 2 \

@@ -1,0 +1,10 @@
+{
+  "tara_5_sft": {
+    "file_name": "tara_train_dataset.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+  }
+}
