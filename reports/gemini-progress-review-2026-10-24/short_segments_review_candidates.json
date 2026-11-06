@@ -1,0 +1,308 @@
+[
+  {
+    "key": "bailian/ch_0017",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "bailian/ch_0027",
+    "stages": {
+      "cliffhanger": 10
+    }
+  },
+  {
+    "key": "bailian/ch_0207",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "bailian/ch_0555",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "bailian/ch_0655",
+    "stages": {
+      "cliffhanger": 10
+    }
+  },
+  {
+    "key": "bailian/ch_0957",
+    "stages": {
+      "cliffhanger": 16
+    }
+  },
+  {
+    "key": "bailian/ch_1016",
+    "stages": {
+      "cliffhanger": 13
+    }
+  },
+  {
+    "key": "bailian/ch_1076",
+    "stages": {
+      "cliffhanger": 16
+    }
+  },
+  {
+    "key": "bailian/ch_1256",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "bailian/ch_1464",
+    "stages": {
+      "aftershock": 2
+    }
+  },
+  {
+    "key": "bailian/ch_1614",
+    "stages": {
+      "cliffhanger": 17
+    }
+  },
+  {
+    "key": "bailian/ch_1775",
+    "stages": {
+      "aftershock": 5
+    }
+  },
+  {
+    "key": "bailian/ch_1906",
+    "stages": {
+      "aftershock": 16
+    }
+  },
+  {
+    "key": "bailian/ch_2017",
+    "stages": {
+      "aftershock": 13
+    }
+  },
+  {
+    "key": "bailian/ch_2067",
+    "stages": {
+      "cliffhanger": 17
+    }
+  },
+  {
+    "key": "bailian/ch_2097",
+    "stages": {
+      "cliffhanger": 12
+    }
+  },
+  {
+    "key": "bailian/ch_2508",
+    "stages": {
+      "aftershock": 7
+    }
+  },
+  {
+    "key": "bailian/ch_2548",
+    "stages": {
+      "aftershock": 4
+    }
+  },
+  {
+    "key": "bailian/ch_2608",
+    "stages": {
+      "ramp_up": 2
+    }
+  },
+  {
+    "key": "bailian/ch_2911",
+    "stages": {
+      "climax": 2
+    }
+  },
+  {
+    "key": "bailian/ch_3021",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "bailian/ch_3081",
+    "stages": {
+      "cliffhanger": 12
+    }
+  },
+  {
+    "key": "bailian/ch_3101",
+    "stages": {
+      "aftershock": 5
+    }
+  },
+  {
+    "key": "bailian/ch_3151",
+    "stages": {
+      "cliffhanger": 12
+    }
+  },
+  {
+    "key": "bailian/ch_3251",
+    "stages": {
+      "cliffhanger": 15
+    }
+  },
+  {
+    "key": "bailian/ch_3341",
+    "stages": {
+      "aftershock": 2
+    }
+  },
+  {
+    "key": "bailian/ch_3670",
+    "stages": {
+      "aftershock": 7
+    }
+  },
+  {
+    "key": "bailian/ch_3790",
+    "stages": {
+      "cliffhanger": 11
+    }
+  },
+  {
+    "key": "changsheng/ch_0554",
+    "stages": {
+      "cliffhanger": 10
+    }
+  },
+  {
+    "key": "changsheng/ch_0614",
+    "stages": {
+      "cliffhanger": 8
+    }
+  },
+  {
+    "key": "changsheng/ch_0654",
+    "stages": {
+      "cliffhanger": 5
+    }
+  },
+  {
+    "key": "changsheng/ch_0794",
+    "stages": {
+      "cliffhanger": 15
+    }
+  },
+  {
+    "key": "changsheng/ch_0834",
+    "stages": {
+      "cliffhanger": 7
+    }
+  },
+  {
+    "key": "changsheng/ch_1780",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "changsheng/ch_1829",
+    "stages": {
+      "cliffhanger": 18
+    }
+  },
+  {
+    "key": "chongsheng/ch_0058",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_0120",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "chongsheng/ch_0221",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_0252",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_0323",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_0402",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_0451",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_0539",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_0620",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "chongsheng/ch_1042",
+    "stages": {
+      "cliffhanger": 2
+    }
+  },
+  {
+    "key": "dafeng/ch_0158",
+    "stages": {
+      "cliffhanger": 15
+    }
+  },
+  {
+    "key": "doupo/ch_0935",
+    "stages": {
+      "cliffhanger": 19
+    }
+  },
+  {
+    "key": "momen/ch_0946",
+    "stages": {
+      "cliffhanger": 18
+    }
+  },
+  {
+    "key": "momen/ch_1056",
+    "stages": {
+      "cliffhanger": 8
+    }
+  },
+  {
+    "key": "xianni/ch_0337",
+    "stages": {
+      "cliffhanger": 14
+    }
+  },
+  {
+    "key": "xianni/ch_0680",
+    "stages": {
+      "cliffhanger": 9
+    }
+  }
+]

@@ -1,0 +1,48 @@
+============================================================
+       TARA-5 网文反向装配法 —— 本地微调与校验引擎       
+============================================================
+[*] 基座模型: /home/iumdoa/Projects/lora/models/Qwen2.5-1.5B-Instruct
+[*] 数据集: /home/iumdoa/Projects/lora/data/tara5_action_v1/all_books/dataset/tara5_action_v1_ready_2560.json
+[*] 输出目录: /home/iumdoa/Projects/lora/output/tara_lora_5
+[*] 训练轮次: 3 Epochs, 批大小: 1 x 8
+[*] 显卡设备: Quadro RTX 4000
+============================================================
+[*] 正在加载 Tokenizer...
+[*] 数据预检 [train]（原文件不修改；提示与回答均不截断）：
+{
+  "split": "train",
+  "total": 3500,
+  "kept": 3500,
+  "overlength": 0,
+  "max_length": 2560,
+  "longest": 2496,
+  "by_task": {
+    "tara5_opening": {
+      "total": 702,
+      "kept": 702,
+      "overlength": 0
+    },
+    "tara5_ramp_up": {
+      "total": 701,
+      "kept": 701,
+      "overlength": 0
+    },
+    "tara5_climax": {
+      "total": 697,
+      "kept": 697,
+      "overlength": 0
+    },
+    "tara5_aftershock": {
+      "total": 699,
+      "kept": 699,
+      "overlength": 0
+    },
+    "tara5_cliffhanger": {
+      "total": 701,
+      "kept": 701,
+      "overlength": 0
+    }
+  },
+  "overlength_examples": []
+}
+[+] 只读预检完成，未加载模型或启动训练。

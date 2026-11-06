@@ -167,6 +167,45 @@ def validate_tara5_chapter(data: Dict[str, Any]) -> Tuple[bool, List[str]]:
         if "needs_review" not in status or not isinstance(status["needs_review"], bool):
             errors.append("annotation_status.needs_review 必须为布尔值")
 
+    # Referential integrity is part of validation, not just nonempty strings.
+    if isinstance(chars, list) and isinstance(plans, dict):
+        char_ids = [c.get("character_id") for c in chars if isinstance(c, dict)]
+        if len(char_ids) != len(set(char_ids)):
+            errors.append("characters.character_id 必须唯一")
+        actions = [a for plan in plans.values() if isinstance(plan, dict)
+                   for a in plan.get("action_chain", []) if isinstance(a, dict)]
+        action_ids = [a.get("action_id") for a in actions]
+        if len(action_ids) != len(set(action_ids)):
+            errors.append("action_id 必须在本章唯一")
+        for action in actions:
+            if action.get("actor_id") not in char_ids:
+                errors.append(f"actor_id 未在 characters 中定义: {action.get('actor_id')}")
+            for dep in action.get("depends_on", []):
+                if dep not in action_ids or dep == action.get("action_id"):
+                    errors.append(f"depends_on 无效引用: {dep}")
+
+    # Source-grounded data has stronger guarantees than legacy drafts.
+    if data.get("source_info", {}).get("boundary_policy") == "disjoint_source_spans":
+        last_end = -1
+        for stage in VALID_STAGES:
+            seg = data.get("segments", {}).get(stage, {})
+            text = seg.get("text", "")
+            if seg.get("char_count") != len(text):
+                errors.append(f"{stage}.char_count 与正文长度不一致")
+            lo, hi = seg.get("raw_char_offset_start"), seg.get("raw_char_offset_end")
+            if type(lo) is not int or type(hi) is not int or lo < last_end or hi <= lo or hi-lo != len(text):
+                errors.append(f"{stage} 原文范围重叠、倒序或长度错误")
+            else:
+                last_end = hi
+            budget = data.get("stage_plans", {}).get(stage, {}).get("length_budget", {})
+            if not budget.get("min_chars", 0) <= len(text) <= budget.get("max_chars", 0):
+                errors.append(f"{stage} 正文不在篇幅预算内")
+            if not text.startswith(seg.get("anchor_start", "")) or not text.endswith(seg.get("anchor_end", "")):
+                errors.append(f"{stage} 锚点不位于片段首尾")
+        for fact in data.get("confirmed_facts", []):
+            if fact.get("source_scope") != "previous_chapter" or not fact.get("source_path"):
+                errors.append("confirmed_facts 必须提供前章来源")
+
     return len(errors) == 0, errors
 
 

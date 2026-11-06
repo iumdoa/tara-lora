@@ -1,0 +1,26 @@
+{
+  "is_narrative": true,
+  "body_start": 3,
+  "stage_ends": [6, 22, 35, 40, 46],
+  "exclusion_reason": "仅排除卷名与重复章节标题，完整保留全部叙事正文。",
+  "chapter_outline": [
+    "中年人的飞剑斩断鞭蛇并追击，王林护住张虎后退。",
+    "王林以玉简光幕暂挡飞剑，在对方加力后祭出丹宝玉符。",
+    "王林以三符困剑、其余符印追击，中年人自报师门未毕即被击杀。",
+    "王林收回剩余符印和玉符，拿起飞剑与剑鞘查看。",
+    "司徒南解释未出手的原因，指出真正的宝贝是剑鞘。"
+  ],
+  "facts": [],
+  "characters": [
+    {"character_id": "c1", "name": "王林", "goal": "抵挡飞剑，利用丹宝反击保命", "known_info": [], "unknown_info": [], "misjudgment": ""},
+    {"character_id": "c2", "name": "司徒南", "goal": "让王林独自历练，并指点他辨认所得宝物", "known_info": [], "unknown_info": [], "misjudgment": ""},
+    {"character_id": "c3", "name": "中年人", "goal": "操纵飞剑攻击王林", "known_info": [], "unknown_info": [], "misjudgment": ""}
+  ],
+  "plans": [
+    {"actor_id": "c3", "action": "中年人的飞剑虚影斩断鞭蛇后继续攻向王林，王林将张虎甩开并后退", "result": "鞭蛇被毁，王林面临飞剑追击", "evidence_units": [3, 4, 5, 6]},
+    {"actor_id": "c1", "action": "王林用玉简光幕暂挡飞剑，见飞剑变黑增威后祭出玉符并催动金色符号", "result": "玉简出现裂痕，丹宝准备迎击黑色飞剑", "evidence_units": [8, 9, 10, 13, 14, 15, 17, 18, 19, 22]},
+    {"actor_id": "c1", "action": "王林用三枚金符困住飞剑，再催动余下金符追击中年人", "result": "中年人及储物袋化为飞灰，剑鞘完整落下", "evidence_units": [23, 24, 29, 31, 32, 33, 34, 35]},
+    {"actor_id": "c1", "action": "王林收回尚存金符和玉符，并用引力术取来飞剑与剑鞘查看", "result": "飞剑停止冲击，剩余符力及所得宝物被收起", "evidence_units": [36, 37, 38, 39, 40]},
+    {"actor_id": "c2", "action": "司徒南说明保存元婴精华和让王林独自成长的考虑，并评价所得宝物", "result": "王林得知剑鞘比飞剑更有价值", "evidence_units": [41, 42, 43, 44, 45, 46]}
+  ]
+}

@@ -143,3 +143,7 @@ llamafactory-cli train \
     --fp16 True
 ```
 
+
+## 与 Mytha 联合运行
+
+本地 Writer HTTP 服务和 Mytha 配置步骤见 [联合运行说明](docs/mytha-serving.md)。协议以当前 prompt_builder 和训练导出为准；服务联通不等于正文质量验收。

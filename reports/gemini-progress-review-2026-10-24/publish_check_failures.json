@@ -1,0 +1,90 @@
+[
+  {
+    "key": "guimi/ch_0531",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_0531_第三部 旅行家_第四十六章 放牧_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "7b9341eeff4c38815d8168e19947bc18a2c6551f7f16e71b156b408afd10f5bf"
+  },
+  {
+    "key": "guimi/ch_0552",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_0552_第三部 旅行家_第六十七章 上位精灵_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "3187ba4d2668502bfc1fd681225b4678f8c97105018a8d679373db82de81b1cd"
+  },
+  {
+    "key": "guimi/ch_0833",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_0833_第四部 不死者_第九十七章 六月来临_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "fe35f234080f23924198b1b906cfd35c601b151b3ee48c4bdadc3076779dba62"
+  },
+  {
+    "key": "guimi/ch_1239",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_1239_第六部 逐光者_第八十三章 两处_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "c32aa454ec8347386ef841e2b886f86d567630e37deeee28497cd13ca41d8e6b"
+  },
+  {
+    "key": "momen/ch_0015",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_0015_第十五章 钓鱼_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "eeec20683b06e45e9e756a944d3455f66db5bb4a3825be9cf9b32de4643cf20d"
+  },
+  {
+    "key": "momen/ch_0035",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_0035_第三十五章 赵师兄和我有缘啊_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "0a5005a7b4a0c99a3d2c02987f117ac7978e61a9216bc2d6bc0a037d4fbcf604"
+  },
+  {
+    "key": "xianni/ch_1449",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1449_第九卷 云海之巅_第1447章 七星古神_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "0532fdac42ee181f3533cdb26309ccbf01b194796d7e7d2239614778f75c0217"
+  },
+  {
+    "key": "xianni/ch_1715",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1715_第十一卷 远古谜团_第1713章 隔墙有耳_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "30046e5102f8505f41d1a60b2ba8ccebd009ab736d78854db4cd31cd33cc4ea8"
+  },
+  {
+    "key": "xianni/ch_1765",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1765_第十一卷 远古谜团_第1763章 离别之涩_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "2103615ab22022c85e5a58d885b93cb4b6eef3a0a1ca7b3ceb7423bcbab3a8c7"
+  },
+  {
+    "key": "xianni/ch_1863",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1863_第十二卷 仙罡第十阳_第1861章 阻拦_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "cac6d5960ff517fd6aaebc7be4c79e8c67df79ab62f32cf0b65920c9d0970717"
+  },
+  {
+    "key": "xianni/ch_1932",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1932_第十二卷 仙罡第十阳_第1930章 一鸣惊人六_tara5_v1.json",
+    "errors": [
+      "尾部排除内容含叙事文字，缺少明确作话特征"
+    ],
+    "sha256": "7951bb5bd00d2fe47166eb87cea2bccb1f061609dece393618fb720c130ed568"
+  }
+]

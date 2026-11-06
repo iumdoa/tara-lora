@@ -28,7 +28,9 @@ def discover_sources(data_root: Path) -> list:
     for p in sorted(data_root.iterdir()):
         if not p.is_dir() or p.name in ["dataset", "raw", "sliced"]:
             continue
-        sft_path = p / "dataset" / "tara_train_dataset.json"
+        sft_path = p / "dataset" / "tara5_action_v1_train.json"
+        if not sft_path.exists():
+            sft_path = p / "dataset" / "tara_train_dataset.json"
         dpo_path = p / "dataset" / "tara_contrast_dpo.json"
         if sft_path.exists():
             sources.append({

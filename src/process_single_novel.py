@@ -49,6 +49,9 @@ def get_book_alias(filename: str) -> str:
         "百炼成仙": "bailian",
         "仙界篇": "xianjie",
         "紫府仙缘": "zifu",
+        "觅仙路": "mixian",
+        "道诡异仙": "daogui",
+        "黄昏分界": "huanghun",
     }
     for k, v in alias_map.items():
         if k in filename:
@@ -79,7 +82,9 @@ def update_tracks_registry(alias: str, book_filename: str, dataset_dir: Path):
         with open(tracks_file, "r", encoding="utf-8") as f:
             cfg = json.load(f)
 
-        sft_file = dataset_dir / "tara_train_dataset.json"
+        sft_file = dataset_dir / "tara5_action_v1_train.json"
+        if not sft_file.exists():
+            sft_file = dataset_dir / "tara_train_dataset.json"
         sft_count = 0
         if sft_file.exists():
             with open(sft_file, "r", encoding="utf-8") as f:
@@ -130,6 +135,7 @@ def main():
     parser.add_argument("--ratio", type=float, default=0.1, help="分卷抽样比例 (默认 0.1)")
     parser.add_argument("--threads", type=int, default=5, help="并发线程数 (默认 5)")
     parser.add_argument("--use-opencode", action="store_true", help="使用 OpenCode Go 额度调用 DeepSeek")
+    parser.add_argument("--skip-dpo", action="store_true", default=True, help="跳过耗时的 DPO 对比集盲写 (默认跳过，仅生成高质量 SFT)")
     args = parser.parse_args()
 
     book_path = Path(args.book_file)
@@ -168,6 +174,8 @@ def main():
     ]
     if args.use_opencode:
         cmd_pipeline.append("--use-opencode")
+    if args.skip_dpo:
+        cmd_pipeline.append("--skip-dpo")
     run_cmd(cmd_pipeline, f"2/4 10% 大卷抽样切片与 DPO/SFT 编译")
 
     # 3. 聚合进全局网文体系总库 (merge_datasets.py)

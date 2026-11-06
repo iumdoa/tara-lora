@@ -1,0 +1,32 @@
+test_01_schema_validation (test_tara5_action_v1.TestTara5ActionV1.test_01_schema_validation)
+测试 Schema 校验：合规数据通过，违规数据准确报错 ... ok
+test_02_train_vs_infer_prompt_consistency (test_tara5_action_v1.TestTara5ActionV1.test_02_train_vs_infer_prompt_consistency)
+测试同一阶段的训练输入与推理输入具有完全相同的提示词模板与语义 ... ok
+test_03_assembly_anchor_ownership_and_deduplication (test_tara5_action_v1.TestTara5ActionV1.test_03_assembly_anchor_ownership_and_deduplication)
+测试接缝装配：前段保留，后段剥离 (Prev-Retained, Next-Stripped)，禁止整行误删 ... ok
+test_04_dataset_split_no_leakage (test_tara5_action_v1.TestTara5ActionV1.test_04_dataset_split_no_leakage)
+测试验证集切分：同章五段绝对不跨界，避免相邻上下文泄漏 ... ok
+test_export_roles_and_ids_are_correct (test_tara5_repair.RepairTests.test_export_roles_and_ids_are_correct) ... ok
+test_future_evidence_is_not_accepted_as_previous_fact (test_tara5_repair.RepairTests.test_future_evidence_is_not_accepted_as_previous_fact) ... ok
+test_insufficient_balance_stops_subsequent_requests (test_tara5_repair.RepairTests.test_insufficient_balance_stops_subsequent_requests) ... ok
+test_reference_and_count_checks (test_tara5_repair.RepairTests.test_reference_and_count_checks) ... ok
+test_same_chapter_number_in_different_books_splits_independently (test_tara5_repair.RepairTests.test_same_chapter_number_in_different_books_splits_independently) ... ok
+test_source_offsets_detect_invented_text_and_omissions (test_tara5_repair.RepairTests.test_source_offsets_detect_invented_text_and_omissions) ... ok
+test_unreviewed_samples_are_blocked_before_tokenization (test_tara5_repair.RepairTests.test_unreviewed_samples_are_blocked_before_tokenization) ... ok
+test_collator_mutation_cannot_change_cached_samples (test_training_data.TrainingDataTests.test_collator_mutation_cannot_change_cached_samples) ... ok
+test_complete_response_and_chat_markers_are_preserved (test_training_data.TrainingDataTests.test_complete_response_and_chat_markers_are_preserved) ... ok
+test_empty_answer_and_multi_turn_are_not_silently_accepted (test_training_data.TrainingDataTests.test_empty_answer_and_multi_turn_are_not_silently_accepted) ... ok
+test_exact_length_is_accepted (test_training_data.TrainingDataTests.test_exact_length_is_accepted) ... ok
+test_explicit_skip_only_filters_in_memory (test_training_data.TrainingDataTests.test_explicit_skip_only_filters_in_memory) ... ok
+test_no_usable_data_is_an_error (test_training_data.TrainingDataTests.test_no_usable_data_is_an_error) ... ok
+test_overlong_answer_blocks_instead_of_truncating (test_training_data.TrainingDataTests.test_overlong_answer_blocks_instead_of_truncating) ... ok
+test_overlong_prompt_cannot_be_relabelled_as_answer (test_training_data.TrainingDataTests.test_overlong_prompt_cannot_be_relabelled_as_answer) ... ok
+test_preflight_never_loads_model_and_bad_data_blocks_before_loading (test_training_data.TrainingDataTests.test_preflight_never_loads_model_and_bad_data_blocks_before_loading) ... ok
+test_template_prefix_mismatch_blocks_training (test_training_data.TrainingDataTests.test_template_prefix_mismatch_blocks_training) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.005s
+
+OK
+[*] 章节组隔离切分完成: 训练集包含 4 章 (20 样本), 验证集包含 1 章 (5 样本)。同章五段绝对无跨界泄漏。
+[*] 章节组隔离切分完成: 训练集包含 8 章 (8 样本), 验证集包含 2 章 (2 样本)。同章五段绝对无跨界泄漏。

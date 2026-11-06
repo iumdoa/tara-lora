@@ -1,0 +1,46 @@
+[
+  {
+    "key": "changsheng/ch_0062",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_0062_第一卷_第4章 仙人拼一剑_tara5_v1.json",
+    "fact": "无数子弹一齐轰击在两位仙人身上",
+    "evidence": "“哒哒哒哒……”",
+    "source_path": "data/changsheng/raw/ch_0061_第一卷_第3章 凡人欲捕仙.txt",
+    "source_scope": "previous_chapter",
+    "status": "confirmed_incomplete_evidence",
+    "reason": "引文只有声音或发言提示，未包含事实描述的具体事件；事实本身是否属实需结合前章上下文，不在此判定虚构。"
+  },
+  {
+    "key": "xianzhe/ch_0055",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0055_第五十四章 溃散_tara5_v1.json",
+    "fact": "坤图提议杀了惑乱军心的袁铭。",
+    "evidence": "坤图适时提议。",
+    "source_path": "data/xianzhe/raw/ch_0054_第五十三章 魂力.txt",
+    "source_scope": "previous_chapter",
+    "status": "confirmed_incomplete_evidence",
+    "reason": "引文只有声音或发言提示，未包含事实描述的具体事件；事实本身是否属实需结合前章上下文，不在此判定虚构。"
+  },
+  {
+    "key": "xianzhe/ch_0055",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0055_第五十四章 溃散_tara5_v1.json",
+    "fact": "央婵附和坤图，主张杀死袁铭。",
+    "evidence": "央婵跟着说道。",
+    "source_path": "data/xianzhe/raw/ch_0054_第五十三章 魂力.txt",
+    "source_scope": "previous_chapter",
+    "status": "confirmed_incomplete_evidence",
+    "reason": "引文只有声音或发言提示，未包含事实描述的具体事件；事实本身是否属实需结合前章上下文，不在此判定虚构。"
+  },
+  {
+    "key": "xianzhe/ch_0155",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0155_第一百五十四章 摄魂铃_tara5_v1.json",
+    "fact": "袁铭对黑影报出鬼市暗语“寻火”以示买东西。",
+    "evidence": "袁铭说道。",
+    "source_path": "data/xianzhe/raw/ch_0154_第一百五十三章 鬼市.txt",
+    "source_scope": "previous_chapter",
+    "status": "confirmed_incomplete_evidence",
+    "reason": "引文只有声音或发言提示，未包含事实描述的具体事件；事实本身是否属实需结合前章上下文，不在此判定虚构。"
+  }
+]

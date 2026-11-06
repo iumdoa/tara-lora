@@ -10,6 +10,7 @@ TARA-5 文风偏好对比数据集构建器 (AI Draft vs. Human Original Contras
 """
 
 import os
+import re
 import sys
 import json
 import time
@@ -37,16 +38,21 @@ from prompts.extraction_prompts import AI_DRAFT_USER_TEMPLATE
 
 def call_deepseek_api(user_prompt: str, api_key: str, base_url: str = "https://api.deepseek.com/v1", model: str = "deepseek-flash") -> str:
     """调用 API 生成 AI 初稿 (支持 DeepSeek 与 OpenCode)"""
-    if os.environ.get("OPENCODE_USE_CLI") == "1" or api_key == "opencode" or model.startswith("opencode-go/"):
+    if os.environ.get("OPENCODE_USE_CLI") == "1" or api_key == "opencode" or model.startswith("opencode-go/") or model.startswith("opencode/"):
         import subprocess, random
         full_input = f"你是一位网络小说作家，请根据给定的章节大纲与上一章结尾承接，撰写本章核心正文（篇幅约 1500~2000 字）。\n\n【极其重要】你必须直接生成小说正文文本，严禁调用任何外部工具或命令行（禁止 bash、禁止写文件）！\n\n{user_prompt}"
-        cmd = ["opencode", "run", "--pure", "--dir", "/tmp", "-m", "opencode-go/deepseek-v4.1-flash", full_input]
+        cli_model = os.environ.get("OPENCODE_MODEL", "opencode/deepseek-v4.1-flash-free") if model.startswith("opencode") else model
+        cmd = ["opencode", "run", "--pure", "--dir", "/tmp", "--title", "TARA", "-m", cli_model, full_input]
         for attempt in range(4):
             time.sleep(random.uniform(0.1, 0.4))
-            res = subprocess.run(cmd, capture_output=True, text=True)
-            out = res.stdout.strip()
-            if res.returncode == 0 and out:
-                return out
+            try:
+                res = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+                out = res.stdout.strip()
+                out = re.sub(r"^>.*?\n+", "", out)
+                if res.returncode == 0 and out:
+                    return out
+            except subprocess.TimeoutExpired:
+                print(f"[-] OpenCode CLI 调用超时 (180s)，正在重试 (第 {attempt+1} 次)...")
             time.sleep(1.0 + attempt)
         raise RuntimeError(f"OpenCode CLI call failed after 4 retries")
 
@@ -161,7 +167,7 @@ def main():
     default_api_key = "opencode" if use_opencode_cli else (os.environ.get("OPENCODE_API_KEY") or os.environ.get("DEEPSEEK_API_KEY", ""))
     is_opencode = bool(os.environ.get("OPENCODE_API_KEY")) or use_opencode_cli
     default_base_url = os.environ.get("OPENCODE_BASE_URL", "https://opencode.ai/inference/go/openai/v1" if is_opencode else os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1"))
-    default_model = os.environ.get("OPENCODE_MODEL", "opencode-go/deepseek-v4.1-flash" if use_opencode_cli else ("deepseek-v4.1-flash" if is_opencode else "deepseek-flash"))
+    default_model = os.environ.get("OPENCODE_MODEL", "opencode/deepseek-v4.1-flash-free" if use_opencode_cli else ("deepseek-v4.1-flash-free" if is_opencode else "deepseek-flash"))
 
     parser = argparse.ArgumentParser(description="TARA-5 AI与原著文风对比数据集构建器")
     parser.add_argument("--sliced-dir", type=str, default="data/sliced", help="切分文件目录")

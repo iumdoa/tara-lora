@@ -1,0 +1,9 @@
+{
+  "approved": [
+    "ch_0186",
+    "ch_0216",
+    "ch_0246"
+  ],
+  "count": 3,
+  "validation": "validate_annotation and validate_source_chapter passed"
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "key": "bailian/ch_1464",
+    "stage": "aftershock",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_1464_第五卷 天云十二州_第一千四百六十一章 三人的抉择_tara5_v1.json",
+    "action": "鸣钟和尚取出阵旗与圆盘，着手布置遮掩洞穴的幻术阵法。"
+  },
+  {
+    "key": "bailian/ch_2608",
+    "stage": "ramp_up",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_2608_第七卷 纵横三界_第两千六百零五章 林轩出关_tara5_v1.json",
+    "action": "场景过渡，林轩走向洞外"
+  },
+  {
+    "key": "bailian/ch_2911",
+    "stage": "climax",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_2911_第八卷 上古隐秘_第两千九百零八章 望风而逃_tara5_v1.json",
+    "action": "收回化身，不再隐藏行迹，以最快遁速飞往天蝎山。"
+  },
+  {
+    "key": "bailian/ch_3341",
+    "stage": "aftershock",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_3341_第八卷 上古隐秘_第三千三百三十八章 老谋深算_tara5_v1.json",
+    "action": "竞价至两亿后现场以省略号过渡，争夺仍在继续"
+  },
+  {
+    "key": "chongsheng/ch_0058",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0058_第一卷 终是庄周梦了蝶你是恩赐也是劫_第57章 润物细无声_tara5_v1.json",
+    "action": "陈汉升提出让钟建成支持一个手机。"
+  },
+  {
+    "key": "chongsheng/ch_0221",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0221_第二卷 我与春风皆过客你携秋水揽星河_第107章 防不胜防啊_tara5_v1.json",
+    "action": "陈汉升在章末以省略号收束，内心确认两个目的都已实现。"
+  },
+  {
+    "key": "chongsheng/ch_0252",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0252_第二卷 我与春风皆过客你携秋水揽星河_第138章 提前两年半出世的宝藏_tara5_v1.json",
+    "action": "陈汉升对何畅公开提及沈幼楚一事暗自思量"
+  },
+  {
+    "key": "chongsheng/ch_0323",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0323_第二卷 我与春风皆过客你携秋水揽星河_第209章 咱们当兄妹吧_tara5_v1.json",
+    "action": "明确表示不会当陈汉升的妹妹。"
+  },
+  {
+    "key": "chongsheng/ch_0402",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0402_第三卷 看那高楼平地起愿有岁月可回头_第44章 应对渣女的实际教学下_tara5_v1.json",
+    "action": "陈汉升继续与叶绮短信互动，并以省略号收束本章"
+  },
+  {
+    "key": "chongsheng/ch_0451",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0451_第三卷 看那高楼平地起愿有岁月可回头_第94章 破产周记之修罗场_tara5_v1.json",
+    "action": "陈汉升结束与萧容鱼通话，面对她次日来财大的决定"
+  },
+  {
+    "key": "chongsheng/ch_0539",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0539_第三卷 看那高楼平地起愿有岁月可回头_第182章 果壳电子_tara5_v1.json",
+    "action": "陈汉升开车离去，留下小伙子念叨果壳电子"
+  },
+  {
+    "key": "chongsheng/ch_0620",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0620_第四卷 春风得意马蹄疾芙蓉账下现修罗_第67章 修罗场和胖猫_tara5_v1.json",
+    "action": "边诗诗追问王梓博为何知道猫的名字"
+  },
+  {
+    "key": "chongsheng/ch_1042",
+    "stage": "cliffhanger",
+    "text": "……",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_1042_第五卷 世间必有双全法卷破重云终见晴_第284章 父与子的一次谈话_tara5_v1.json",
+    "action": "陈兆军说完对未来的期待后，对话以省略号收束"
+  }
+]

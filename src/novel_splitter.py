@@ -304,8 +304,15 @@ def extract_chapters_from_txt(txt_path: Path, output_dir: Path) -> list:
 
     extracted_files = []
     chapter_idx = 1
+    current_vol = ""
+    vol_re = re.compile(r'^\s*第[0-9一二三四五六七八九十百千万零两]+卷\b.*$')
+
     for i, match in enumerate(valid_matches):
         title = match.group(1).strip()
+        if vol_re.match(title):
+            current_vol = title
+            continue
+
         start_pos = match.start()
         end_pos = valid_matches[i + 1].start() if i + 1 < len(valid_matches) else len(content)
         
@@ -314,7 +321,8 @@ def extract_chapters_from_txt(txt_path: Path, output_dir: Path) -> list:
         if len(chapter_body) < 300:
             continue
 
-        safe_title = sanitize_filename(title)
+        full_title = f"{current_vol}_{title}" if current_vol else title
+        safe_title = sanitize_filename(full_title)
         filename = f"ch_{chapter_idx:04d}_{safe_title}.txt"
         target_path = output_dir / filename
 

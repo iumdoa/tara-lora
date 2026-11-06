@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "chapters": 702,
+  "samples": 3510,
+  "ready": 3500,
+  "long_context": 10,
+  "quarantined": 1803,
+  "books": {
+    "bailian": 387,
+    "changsheng": 150,
+    "chongsheng": 79,
+    "dafeng": 72,
+    "daomu": 13,
+    "xianni": 1
+  },
+  "failures": []
+}

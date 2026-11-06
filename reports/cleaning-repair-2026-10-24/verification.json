@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "chapters": 3198,
+  "samples": 15990,
+  "ready": 15893,
+  "long_context": 97,
+  "quarantined": 28,
+  "books": {
+    "bailian": 421,
+    "changsheng": 171,
+    "chongsheng": 103,
+    "dafeng": 88,
+    "daomu": 52,
+    "dawang": 126,
+    "doupo": 151,
+    "fanren": 234,
+    "guimi": 131,
+    "maoxianwu": 72,
+    "mixian": 118,
+    "momen": 118,
+    "shaosong": 40,
+    "shenmi": 149,
+    "wenjian": 110,
+    "xianjie": 140,
+    "xianni": 200,
+    "xianzhe": 126,
+    "xiuxian": 139,
+    "yaowu": 125,
+    "zifu": 384
+  },
+  "failures": []
+}

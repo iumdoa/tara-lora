@@ -342,10 +342,12 @@ def build_sharegpt_samples_from_v1(chapter_data: Dict[str, Any]) -> List[Dict[st
         gold_text = segs.get(st, {}).get("text", "").strip()
 
         sample = {
-            "id": f"{ch_id}_{st}",
+            "id": f"{chapter_data.get('source_key', chapter_data.get('source_novel', 'unknown'))}:{ch_id}:{st}",
+            "source_key": chapter_data.get("source_key", chapter_data.get("source_novel", "unknown")),
             "chapter_id": ch_id,
             "source_novel": chapter_data.get("source_novel", "unknown"),
             "task_type": task_type,
+            "annotation_status": chapter_data.get("annotation_status", {}),
             "system": sys_prompt,
             "conversations": [
                 {"from": "human", "value": user_prompt},

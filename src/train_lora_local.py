@@ -100,6 +100,8 @@ class TaraShareGPTDataset(Dataset):
             if not isinstance(item, dict):
                 raise ValueError(f"[{split_name}] 样本索引 {index} 不是对象")
             ident = item.get("id", str(index))
+            if item.get("annotation_status", {}).get("needs_review") is True:
+                raise ValueError(f"[{split_name}] 样本 {ident}: 尚未通过内容复核，不可用于训练")
             conversations = item.get("conversations")
             if (
                 not isinstance(conversations, list)
@@ -188,20 +190,22 @@ def split_dataset_by_chapter(
             # 兼容从 id 解析 (如 ch_0003_climax)
             s_id = str(item.get("id", ""))
             ch_key = s_id.rsplit("_", 1)[0] if "_" in s_id else s_id
+        ch_key = (item.get("source_key", item.get("source_novel", "")), ch_key)
         chapter_groups.setdefault(ch_key, []).append(item)
 
-    unique_chapters = list(chapter_groups.keys())
-    val_chapter_count = max(1, round(len(unique_chapters) * val_ratio))
-    train_chapter_count = len(unique_chapters) - val_chapter_count
-
-    if train_chapter_count <= 0:
-        # 章节过少无法切分时，全部留给训练
-        print("[!] 警告：章节总数过少，无法执行有效的独立章节验证集切分，保持纯训练模式。")
-        return raw_data, []
-
-    # 连续块划分（取末尾章节块作为验证集，避免随机打乱导致的相邻上下文穿透泄漏）
-    train_keys = unique_chapters[:train_chapter_count]
-    val_keys = unique_chapters[train_chapter_count:]
+    # Split chronological chapter blocks independently for each book.
+    by_source = {}
+    for key in chapter_groups:
+        by_source.setdefault(key[0], []).append(key)
+    train_keys, val_keys = [], []
+    for keys in by_source.values():
+        keys.sort(key=lambda key: key[1])
+        if len(keys) < 2:
+            train_keys.extend(keys)
+            continue
+        count = min(len(keys)-1, max(1, round(len(keys) * val_ratio)))
+        train_keys.extend(keys[:-count])
+        val_keys.extend(keys[-count:])
 
     train_data = []
     for k in train_keys:
@@ -238,7 +242,7 @@ def train():
     parser.add_argument("--model_name_or_path", type=str, default=default_model,
                         help="预训练基座模型 ID 或本地路径")
     parser.add_argument("--dataset_path", type=str,
-                        default=str(LORA_ROOT / "data" / "dataset" / "tara_train_dataset.json"),
+                        default=str(LORA_ROOT / "data" / "tara5_action_v1" / "all_books" / "dataset" / "tara5_action_v1_ready_2560.json"),
                         help="TARA 训练集 JSON 路径")
     parser.add_argument("--val_dataset_path", type=str, default="",
                         help="可选独立验证集路径 (若未指定，可通过 --val_ratio 按章节划分)")

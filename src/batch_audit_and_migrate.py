@@ -407,13 +407,13 @@ def audit_and_migrate_chapter(legacy_data: Dict[str, Any], source_novel: str) ->
     }
 
     # 7. 质量复核判定
-    review_items = []
+    review_items = [{"field": "confirmed_facts; characters; stage_plans", "reason": "规则迁移结果，未完成原文语义复核，不可标为专家已审"}]
     for st, text in [(STAGE_OPENING, op_text), (STAGE_CLIFFHANGER, ch_text)]:
         if len(text) < 30:
             review_items.append({"field": f"segments.{st}.text", "reason": f"正文字数偏短 ({len(text)} 字)"})
 
     annotation_status: Dict[str, Any] = {
-        "needs_review": len(review_items) > 0,
+        "needs_review": True,
         "direct_evidence_fields": [
             "segments.opening.text",
             "segments.ramp_up.text",
@@ -427,8 +427,14 @@ def audit_and_migrate_chapter(legacy_data: Dict[str, Any], source_novel: str) ->
             "stage_plans",
         ],
         "review_items": review_items,
-        "annotator": "expert_audited_v1",
+        "annotator": "rule_migrated_unverified_v1",
     }
+
+    # Structural IDs must resolve even for drafts; semantic review is still pending.
+    for plan in stage_plans.values():
+        for action in plan['action_chain']:
+            if action['actor_id'] in (proto_name, '主角'):
+                action['actor_id'] = 'char_protagonist'
 
     # 构造标准章节对象
     chapter_v1: Dict[str, Any] = {
@@ -456,33 +462,8 @@ def audit_and_migrate_chapter(legacy_data: Dict[str, Any], source_novel: str) ->
 
 
 def build_sharegpt_samples(chapter_data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """根据章节结构编译 ShareGPT 样本"""
-    samples: List[Dict[str, Any]] = []
-    ch_id = chapter_data.get("chapter_id", "ch")
-    segs = chapter_data.get("segments", {})
-
-    for st in VALID_STAGES:
-        task_type = STAGE_TASK_MAP[st]
-        sys_prompt, user_prompt = build_task_input(
-            stage=st,
-            chapter_data=chapter_data,
-        )
-        gold_text = segs.get(st, {}).get("text", "").strip()
-
-        sample = {
-            "id": f"{ch_id}_{st}",
-            "chapter_id": ch_id,
-            "source_novel": chapter_data.get("source_novel", "unknown"),
-            "task_type": task_type,
-            "system": sys_prompt,
-            "conversations": [
-                {"from": "human", "value": user_prompt},
-                {"from": "gpt", "value": gold_text},
-            ],
-        }
-        samples.append(sample)
-
-    return samples
+    from src.migrate_to_tara5_action_v1 import build_sharegpt_samples_from_v1
+    return build_sharegpt_samples_from_v1(chapter_data)
 
 
 def process_book_directory(src_dir: Path, novel_name: str, out_root: Path) -> Tuple[int, int, int]:

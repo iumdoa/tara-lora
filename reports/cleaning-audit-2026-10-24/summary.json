@@ -1,0 +1,29 @@
+{
+  "stats": {
+    "books": 18,
+    "chapters": 2505,
+    "schema_pass": 2505,
+    "raw_matched": 2505,
+    "segments": 12525,
+    "train_rows": 12525,
+    "global_rows": 12525,
+    "global_matches_books": true,
+    "duplicate_id_values": 2770,
+    "rows_with_duplicate_id": 7900
+  },
+  "issue_counts": {
+    "PLACEHOLDER_EVIDENCE": 5010,
+    "ACTOR_ID_UNRESOLVED": 12525,
+    "TEXT_NOT_IN_SOURCE": 1240,
+    "SHARED_BOUNDARY_IN_TRAIN": 4155,
+    "REVIEW_STATUS_CONFLICT": 2295,
+    "LENGTH_OUTSIDE_BUDGET": 659,
+    "NESTED_SEGMENTS": 579,
+    "STALE_CHAR_COUNT": 357,
+    "FUTURE_FACT_LEAK": 1,
+    "AUTHOR_NOTE_CANDIDATE": 2,
+    "CROSS_BOOK_CORRUPTION": 1
+  },
+  "affected_chapters": 2505,
+  "issues_total": 26824
+}

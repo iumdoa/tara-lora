@@ -41,16 +41,20 @@ from prompts.extraction_prompts import (
 
 def call_deepseek_api(system_prompt: str, user_prompt: str, api_key: str, base_url: str = "https://api.deepseek.com/v1", model: str = "deepseek-flash") -> str:
     """调用兼容 OpenAI 规范的 API (支持 DeepSeek 官方及 OpenCode 等中继)"""
-    if os.environ.get("OPENCODE_USE_CLI") == "1" or api_key == "opencode" or model.startswith("opencode-go/"):
+    if os.environ.get("OPENCODE_USE_CLI") == "1" or api_key == "opencode" or model.startswith("opencode-go/") or model.startswith("opencode/"):
         import subprocess, random
         full_input = f"{system_prompt}\n\n【极其重要】你必须直接生成最终结果，严禁调用任何外部工具或命令行命令（严禁调用 bash，严禁调用文件读写工具）！直接将符合要求的标准 JSON 字符串输出！\n\n{user_prompt}"
-        cmd = ["opencode", "run", "--pure", "--dir", "/tmp", "-m", "opencode-go/deepseek-v4.1-flash", full_input]
+        cli_model = os.environ.get("OPENCODE_MODEL", "opencode-go/deepseek-v4.1-flash")
+        cmd = ["opencode", "run", "--pure", "--dir", "/tmp", "--title", "TARA", "-m", cli_model, full_input]
         for attempt in range(4):
             time.sleep(random.uniform(0.1, 0.4))
-            res = subprocess.run(cmd, capture_output=True, text=True)
-            out = res.stdout.strip()
-            if res.returncode == 0 and out:
-                return out
+            try:
+                res = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+                out = res.stdout.strip()
+                if res.returncode == 0 and out:
+                    return out
+            except subprocess.TimeoutExpired:
+                print(f"[-] OpenCode CLI 调用超时 (180s)，正在重试 (第 {attempt+1} 次)...")
             time.sleep(1.0 + attempt)
         raise RuntimeError(f"OpenCode CLI call failed after 4 retries")
 
@@ -87,12 +91,16 @@ def call_deepseek_api(system_prompt: str, user_prompt: str, api_key: str, base_u
 def clean_json_response(raw_resp: str) -> dict:
     """清理 API 返回并解析 JSON"""
     text = raw_resp.strip()
-    if text.startswith("```json"):
-        text = text[7:]
-    elif text.startswith("```"):
-        text = text[3:]
-    if text.endswith("```"):
-        text = text[:-3]
+    m = re.search(r"\{.*\}", text, re.DOTALL)
+    if m:
+        text = m.group(0)
+    else:
+        if text.startswith("```json"):
+            text = text[7:]
+        elif text.startswith("```"):
+            text = text[3:]
+        if text.endswith("```"):
+            text = text[:-3]
     return json.loads(text.strip())
 
 
@@ -279,7 +287,7 @@ def main():
     default_api_key = "opencode" if use_opencode_cli else (os.environ.get("OPENCODE_API_KEY") or os.environ.get("DEEPSEEK_API_KEY", ""))
     is_opencode = bool(os.environ.get("OPENCODE_API_KEY")) or use_opencode_cli
     default_base_url = os.environ.get("OPENCODE_BASE_URL", "https://opencode.ai/inference/go/openai/v1" if is_opencode else os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1"))
-    default_model = os.environ.get("OPENCODE_MODEL", "opencode-go/deepseek-v4.1-flash" if use_opencode_cli else ("deepseek-v4.1-flash" if is_opencode else "deepseek-flash"))
+    default_model = os.environ.get("OPENCODE_MODEL", "opencode/deepseek-v4.1-flash-free" if use_opencode_cli else ("deepseek-v4.1-flash-free" if is_opencode else "deepseek-flash"))
 
     parser = argparse.ArgumentParser(description="TARA-5 五段式跨章闭环抽取引擎")
     parser.add_argument("--dir", type=str, default="data/raw", help="原始章节文本所在目录")

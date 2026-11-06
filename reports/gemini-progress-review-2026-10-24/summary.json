@@ -1,0 +1,79 @@
+{
+  "snapshot_time": "2026-10-24T16:26:50.596214+08:00",
+  "records": 2505,
+  "counts": {
+    "approved": 2237,
+    "quarantined": 268
+  },
+  "by_book": {
+    "bailian": {
+      "approved": 421,
+      "quarantined": 1
+    },
+    "changsheng": {
+      "quarantined": 2,
+      "approved": 171
+    },
+    "chongsheng": {
+      "approved": 103,
+      "quarantined": 1
+    },
+    "dafeng": {
+      "approved": 88
+    },
+    "daomu": {
+      "approved": 52,
+      "quarantined": 1
+    },
+    "dawang": {
+      "approved": 126
+    },
+    "doupo": {
+      "approved": 151
+    },
+    "fanren": {
+      "approved": 234
+    },
+    "guimi": {
+      "approved": 135
+    },
+    "maoxianwu": {
+      "approved": 72
+    },
+    "momen": {
+      "approved": 120,
+      "quarantined": 4
+    },
+    "shaosong": {
+      "approved": 40
+    },
+    "shenmi": {
+      "approved": 149,
+      "quarantined": 1
+    },
+    "wenjian": {
+      "approved": 69
+    },
+    "xianni": {
+      "approved": 205,
+      "quarantined": 3
+    },
+    "xianzhe": {
+      "approved": 101,
+      "quarantined": 6
+    },
+    "xiuxian": {
+      "quarantined": 142
+    },
+    "yaowu": {
+      "quarantined": 107
+    }
+  },
+  "approved_failing_publish_checks": 11,
+  "publish_errors": {
+    "尾部排除内容含叙事文字，缺少明确作话特征": 11
+  },
+  "review_provenance_failures": 0,
+  "short_segment_chapters": 51,
+  "unreadable_records": []
+}

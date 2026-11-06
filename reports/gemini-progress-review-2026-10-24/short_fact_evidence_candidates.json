@@ -1,0 +1,952 @@
+[
+  {
+    "key": "bailian/ch_0287",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_0287_第二卷 盗仙草_第二百八十五章 幽冥寒铁_tara5_v1.json",
+    "fact": "林轩认出田小剑，发现其已凝结金丹。",
+    "evidence": "田小剑！",
+    "source_path": "data/bailian/raw/ch_0286_第二卷 盗仙草_第二百八十四章 惊见故人.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_0505",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_0505_第三卷 幽州乱_第五百零三章 再见师尊_tara5_v1.json",
+    "fact": "此鸟被认出是掌管火焰的神鸟必方，实为精纯火灵力所化",
+    "evidence": "必方！",
+    "source_path": "data/bailian/raw/ch_0504_第三卷 幽州乱_第五百零二章 渡劫.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_0756",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_0756_第四卷 七星岛_第七百五十三章 风遁术与百变之体_tara5_v1.json",
+    "fact": "林轩藏身近处并运转敛气秘术，月儿问他是否出手，林轩表示不出手。",
+    "evidence": "不用说，正是林轩！",
+    "source_path": "data/bailian/raw/ch_0755_第四卷 七星岛_第七百五十二章 自残秘术.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_0886",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_0886_第五卷 天云十二州_第八百八十三章 深入奎阴山脉_tara5_v1.json",
+    "fact": "昊天鬼帝是曾几次差点杀死林轩的阴司界怪物。",
+    "evidence": "昊天鬼帝！",
+    "source_path": "data/bailian/raw/ch_0885_第五卷 天云十二州_第八百八十二章 鬼帝再现.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_1285",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_1285_第五卷 天云十二州_第一千二百八十二章 见猎心喜_tara5_v1.json",
+    "fact": "海面突然狂风骤起，巨浪连天，天色随之黯淡。",
+    "evidence": "轰！",
+    "source_path": "data/bailian/raw/ch_1284_第五卷 天云十二州_第一千二百八十一章 往事如烟.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_2568",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_2568_第七卷 纵横三界_第两千五百六十五章 图谋宝藏_tara5_v1.json",
+    "fact": "林轩神识探查发现异常，化为惊虹向下飞去。",
+    "evidence": "“咦，这是……”",
+    "source_path": "data/bailian/raw/ch_2567_第七卷 纵横三界_第两千五百六十四章 巧计灭魔.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_2618",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_2618_第七卷 纵横三界_第两千六百一十五章 炼化混沌太阴之气_tara5_v1.json",
+    "fact": "林轩拿出葫芦，里面装有混沌太阴之气。",
+    "evidence": "混沌太阴之气。",
+    "source_path": "data/bailian/raw/ch_2617_第七卷 纵横三界_第两千六百一十四章 香儿的心意.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_2760",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_2760_第八卷 上古隐秘_第两千七百五十七章 本源之火_tara5_v1.json",
+    "fact": "光球消失，金色漩涡出现在天空中。",
+    "evidence": "刺啦……",
+    "source_path": "data/bailian/raw/ch_2759_第八卷 上古隐秘_第两千七百五十六章 大五行挪移之术.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_2850",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_2850_第八卷 上古隐秘_第两千八百四十七章 梳妆盒_tara5_v1.json",
+    "fact": "冰魄与紫芸艺出同门，紫芸为渡劫初期顶峰，冰魄为真魔始祖。",
+    "evidence": "“师姐？”",
+    "source_path": "data/bailian/raw/ch_2849_第八卷 上古隐秘_第两千八百四十六章 紫芸仙子.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_3221",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_3221_第八卷 上古隐秘_第三千二百一十八章 天罗仙果与补天芝_tara5_v1.json",
+    "fact": "林轩剑光斩在盾牌上被挡住，未伤禁制分毫。",
+    "evidence": "剑光斩在上面。",
+    "source_path": "data/bailian/raw/ch_3220_第八卷 上古隐秘_第三千二百一十七章 轻松灭敌.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_3221",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_3221_第八卷 上古隐秘_第三千二百一十八章 天罗仙果与补天芝_tara5_v1.json",
+    "fact": "林轩随手一击未能破禁，反而更欣喜，认定里面灵药价值更大。",
+    "evidence": "林轩有些动容了。",
+    "source_path": "data/bailian/raw/ch_3220_第八卷 上古隐秘_第三千二百一十七章 轻松灭敌.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_3401",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_3401_第八卷 上古隐秘_第三千三百九十八章 胜负已分_tara5_v1.json",
+    "fact": "他选择不那样做，身形闪避到一边。",
+    "evidence": "他当然不会那么做。",
+    "source_path": "data/bailian/raw/ch_3400_第八卷 上古隐秘_第三千三百九十七章 真灵神威.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_3451",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_3451_第八卷 上古隐秘_第三千四百四十八章 鱼目混珠_tara5_v1.json",
+    "fact": "林轩确信白虎的防御迟早会被攻破。",
+    "evidence": "防御迟早会被攻破。",
+    "source_path": "data/bailian/raw/ch_3450_第八卷 上古隐秘_第三千四百四十七章 功亏一篑.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_3720",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_3720_第九卷 真仙之秘_第三千七百一十七章 似曾相识_tara5_v1.json",
+    "fact": "万蛟王出价五千万，并称鼐龙若再加一块晶石便尽管拿去。",
+    "evidence": "“你……五千万！”",
+    "source_path": "data/bailian/raw/ch_3719_第九卷 真仙之秘_第三千七百一十六章 鼐龙真人与万蛟王.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "bailian/ch_3900",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/bailian/ch_3900_第九卷 真仙之秘_第三千八百九十七章 万妖宗_tara5_v1.json",
+    "fact": "分神期修士有两人，一是林轩，一是枫苑郡云家的若颜仙子。",
+    "evidence": "分神期的只有两个。",
+    "source_path": "data/bailian/raw/ch_3899_第九卷 真仙之秘_第三千八百九十六章 巧遇.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_0062",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_0062_第一卷_第4章 仙人拼一剑_tara5_v1.json",
+    "fact": "无数子弹一齐轰击在两位仙人身上",
+    "evidence": "“哒哒哒哒……”",
+    "source_path": "data/changsheng/raw/ch_0061_第一卷_第3章 凡人欲捕仙.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_0934",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_0934_第五卷_第876章 燃魂碾合道_tara5_v1.json",
+    "fact": "李凡记忆中有一门燃烧神魂短暂提升修为的秘术【燃魂诀】。",
+    "evidence": "【燃魂诀】",
+    "source_path": "data/changsheng/raw/ch_0933_第五卷_第875章 无极强神魂.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1344",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1344_第七卷_第1288章 大启凌玄黄_tara5_v1.json",
+    "fact": "孙二郎告诫众人不可大意，称万仙盟修士只是障眼法，真正胜势须以性命厮杀。",
+    "evidence": "“不要大意。",
+    "source_path": "data/changsheng/raw/ch_1343_第七卷_第1287章 遗念隐残魂.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1354",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1354_第七卷_第1298章 归虚终还真_tara5_v1.json",
+    "fact": "圣皇听闻仙诀，心中闪过明悟，确认这是一篇仙诀。",
+    "evidence": "辛，绝灭。”",
+    "source_path": "data/changsheng/raw/ch_1353_第七卷_第1297章 玄黄风灾劫.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1374",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1374_第七卷_第1318章 神树藏仙字_tara5_v1.json",
+    "fact": "所展示的贼人样貌果然是传法天尊。",
+    "evidence": "果然是传法天尊。",
+    "source_path": "data/changsheng/raw/ch_1373_第七卷_第1317章 传法被控谜.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1534",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1534_第八卷_第1478章 还真的目的_tara5_v1.json",
+    "fact": "大法师肯定李不仁所说的宝物能做到改写仙界三圣君命运之事。",
+    "evidence": "“能。”",
+    "source_path": "data/changsheng/raw/ch_1533_第八卷_第1477章 请诸大道散.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1544",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1544_第八卷_第1488章 造洪荒仙界_tara5_v1.json",
+    "fact": "李凡在【还真】面板上发现新增一行“神佑：幻亦真”。",
+    "evidence": "神佑：幻亦真",
+    "source_path": "data/changsheng/raw/ch_1543_第八卷_第1487章 还真授神技.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1673",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1673_第九卷_第1617章 圣君门前狗_tara5_v1.json",
+    "fact": "无量壁下定决心帮助询问者修行。",
+    "evidence": "“我来助你修行！”",
+    "source_path": "data/changsheng/raw/ch_1672_第九卷_第1616章 凡望婶成仙.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1722",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1722_第九卷_第1666章 诸圣显神通_tara5_v1.json",
+    "fact": "李凡以玄牝大道化作衣裳，盖住即将显露的秘密。",
+    "evidence": "但今时不同往日。",
+    "source_path": "data/changsheng/raw/ch_1721_第九卷_第1665章 灌注无限灵.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1770",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1770_第九卷_第1714章 守丘妙相合_tara5_v1.json",
+    "fact": "李凡对守丘的回答表示不赖，并称赞其豁达。",
+    "evidence": "“……不赖。”",
+    "source_path": "data/changsheng/raw/ch_1769_第九卷_第1713章 还真的真相.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1799",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1799_第九卷_第1743章 神前淡还真_tara5_v1.json",
+    "fact": "李凡在养分漩涡中轻轻一指，涟漪荡起，似有变化又似未变。",
+    "evidence": "轻轻一指。",
+    "source_path": "data/changsheng/raw/ch_1798_第九卷_第1742章 造化夺人心.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "changsheng/ch_1799",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/changsheng/ch_1799_第九卷_第1743章 神前淡还真_tara5_v1.json",
+    "fact": "李凡趁此良机心中怒吼“还真”。",
+    "evidence": "“还真！”",
+    "source_path": "data/changsheng/raw/ch_1798_第九卷_第1742章 造化夺人心.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "chongsheng/ch_0833",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0833_第五卷 世间必有双全法卷破重云终见晴_第75章 萧容鱼的照片为什么都捂着小腹_tara5_v1.json",
+    "fact": "沈幼楚自称是陈汉升的女朋友。",
+    "evidence": "“我是你女朋友！”",
+    "source_path": "data/chongsheng/raw/ch_0832_第五卷 世间必有双全法，卷破重云终见晴_第74章 世界上最温柔的宝藏.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "chongsheng/ch_0853",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/chongsheng/ch_0853_第五卷 世间必有双全法卷破重云终见晴_第95章 胖了一斤的沈幼楚_tara5_v1.json",
+    "fact": "边诗诗问王梓博，若她和陈汉升吵架他会帮谁。",
+    "evidence": "“梓博～”",
+    "source_path": "data/chongsheng/raw/ch_0852_第五卷 世间必有双全法，卷破重云终见晴_第94章 梓博，我和陈汉升吵架了，你会帮谁？.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0018",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0018_第一卷 京察风云_第十六章 许七安的日记_tara5_v1.json",
+    "fact": "去教坊司睡一晚花魁需要三十两银子",
+    "evidence": "“三十两。”",
+    "source_path": "data/dafeng/raw/ch_0017_第一卷 京察风云_第十五章 古往今来人类不变的劣根.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0417",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0417_第二卷 国士无双_第一百八十五章 点化佩刀_tara5_v1.json",
+    "fact": "李妙真嗤笑说有个师兄以前也这么想，随后未解释便随天地会众人离去。",
+    "evidence": "李妙真嗤笑一声。",
+    "source_path": "data/dafeng/raw/ch_0416_第二卷 国士无双_第一百八十四章 分莲子.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0477",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0477_第二卷 国士无双_第二百四十五章 什么许银锣一剑斩了数十万敌军_tara5_v1.json",
+    "fact": "众大学士闻言悚然一惊，王首辅惊得茶水泼手。",
+    "evidence": "众大学士悚然一惊。",
+    "source_path": "data/dafeng/raw/ch_0476_第二卷 国士无双_第二百四十四章 回京.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0576",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0576_第三卷 楚江暝宿风灯零乱少年羁旅_第七十五章 天宗来人_tara5_v1.json",
+    "fact": "度难金刚出现，李灵素心头一颤，许七安暗惊腰子疼。",
+    "evidence": "度难金刚！",
+    "source_path": "data/dafeng/raw/ch_0575_第三卷 楚江暝宿，风灯零乱，少年羁旅_第七十四章 街头偶遇.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0781",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0781_第四卷 逐鹿中原_第一百四十一章 埋了五个月的后手_tara5_v1.json",
+    "fact": "魏渊放下茶杯，指出许七安没来说明大奉岌岌可危，并问监正被谁封印。",
+    "evidence": "魏渊放下茶杯，道：",
+    "source_path": "data/dafeng/raw/ch_0780_第四卷 逐鹿中原_第一百四十章 大青衣.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0801",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0801_第五卷 绝世武神_第六章 许七安的报复_tara5_v1.json",
+    "fact": "慕南栀深夜斥责许七安进长辈房间不成体统，要他滚出去。",
+    "evidence": "慕南栀竖眉道：",
+    "source_path": "data/dafeng/raw/ch_0800_第五卷 绝世武神_第五章 大逆不道的侄儿.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0801",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0801_第五卷 绝世武神_第六章 许七安的报复_tara5_v1.json",
+    "fact": "许七安冷笑回应，称怕慕姨深夜寂寞特来侍寝。",
+    "evidence": "许七安冷笑一声：",
+    "source_path": "data/dafeng/raw/ch_0800_第五卷 绝世武神_第五章 大逆不道的侄儿.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0811",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0811_第五卷 绝世武神_第一十六章 圣女的道_tara5_v1.json",
+    "fact": "李灵素传书求救，称天宗老东西们要打死李妙真。",
+    "evidence": "【七：救命救命！",
+    "source_path": "data/dafeng/raw/ch_0810_第五卷 绝世武神_第十五章 李灵素求救.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dafeng/ch_0831",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dafeng/ch_0831_第五卷 绝世武神_第三十六章 武夫攻山_tara5_v1.json",
+    "fact": "琉璃菩萨要求度厄只需对付超凡便行",
+    "evidence": "“对付超凡便行。”",
+    "source_path": "data/dafeng/raw/ch_0830_第五卷 绝世武神_第三十五章 占卜.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "daomu/ch_0380",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/daomu/ch_0380_第四十四章 石中人_tara5_v1.json",
+    "fact": "泼水后玉石岩壁中显露出一个人影",
+    "evidence": "是一个人影。",
+    "source_path": "data/raw/ch_0379_第四十三章 挖出来的是什么.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dawang/ch_0276",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dawang/ch_0276_第276章 遗迹之谜_tara5_v1.json",
+    "fact": "李力打算当晚寻找机会利用非武力手段杀掉吕树",
+    "evidence": "就等今晚！",
+    "source_path": "data/dawang/raw/ch_0275_第275章 暗号.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dawang/ch_0506",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dawang/ch_0506_第506章 神集的阶级观念_tara5_v1.json",
+    "fact": "长谷川吉向栗山保证不会辜负期望",
+    "evidence": "长谷川吉一躬到底。",
+    "source_path": "data/dawang/raw/ch_0505_第505章 四车货物！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dawang/ch_0526",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dawang/ch_0526_第526章 孤独患者_tara5_v1.json",
+    "fact": "石学晋向吕树提出职位邀请，但吕树因难以承受责任而拒绝。",
+    "evidence": "吕树拒绝了。",
+    "source_path": "data/dawang/raw/ch_0525_第525章 天罗职位.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dawang/ch_0556",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dawang/ch_0556_第556章 肠胃不好_tara5_v1.json",
+    "fact": "李一笑被纳兰雀数落得无言以对",
+    "evidence": "李一笑：“……”",
+    "source_path": "data/dawang/raw/ch_0555_第555章 齐聚洛城.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "dawang/ch_0716",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/dawang/ch_0716_第716章 灾变将至_tara5_v1.json",
+    "fact": "李一笑向吕树哭诉自己第一段感情以女方跟人跑了告终",
+    "evidence": "李一笑一脸悲恸。",
+    "source_path": "data/dawang/raw/ch_0715_第715章 全球进化的序章.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "doupo/ch_0426",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/doupo/ch_0426_第424章 比赛落幕_tara5_v1.json",
+    "fact": "吴昊在被萧炎击倒后嘶哑地承认认输。",
+    "evidence": "“服！”",
+    "source_path": "data/doupo/raw/ch_0425_第423章 毫不留情.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "doupo/ch_0736",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/doupo/ch_0736_第734章 事成_tara5_v1.json",
+    "fact": "萧鼎与萧炎将新成立的联盟命名为炎盟",
+    "evidence": "“炎盟！”",
+    "source_path": "data/doupo/raw/ch_0735_第733章 炎盟.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "doupo/ch_0845",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/doupo/ch_0845_第843章 菩提化体涎_tara5_v1.json",
+    "fact": "莫天行同意了萧炎以三枚斗灵丹加两枚皇极丹的交换条件",
+    "evidence": "“好，依你！”",
+    "source_path": "data/doupo/raw/ch_0844_第842章 以物换物.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "doupo/ch_1055",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/doupo/ch_1055_第1053章 再见丹雷_tara5_v1.json",
+    "fact": "山谷天空凝聚乌云引来丹雷，萧炎炼丹成功",
+    "evidence": "“丹……丹雷？",
+    "source_path": "data/doupo/raw/ch_1054_第1052章 力挽狂澜.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "doupo/ch_1115",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/doupo/ch_1115_第1113章 血玉令_tara5_v1.json",
+    "fact": "萧炎体内弥漫出斗宗强者的磅礴气息。",
+    "evidence": "“斗宗？",
+    "source_path": "data/doupo/raw/ch_1114_第1112章 翎泉统领.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "doupo/ch_1254",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/doupo/ch_1254_第1252章 故人相见_tara5_v1.json",
+    "fact": "萧炎认出对方并喊出了青鳞的名字。",
+    "evidence": "“你……青鳞？",
+    "source_path": "data/doupo/raw/ch_1253_第1251章 青鳞？.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "fanren/ch_0891",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/fanren/ch_0891_第六卷 通天灵宝_第八百九十章 冯家密窟_tara5_v1.json",
+    "fact": "韩立向枫岳询问宁中冯家的具体底细与势力。",
+    "evidence": "冯家势力很大吗？”",
+    "source_path": "data/fanren/raw/ch_0890_第六卷 通天灵宝_第八百八十九章 昊元丹.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "fanren/ch_1641",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/fanren/ch_1641_第九卷 灵界百族_第一千六百四十章 山崩_tara5_v1.json",
+    "fact": "韩立辨认出血床经文名为玄天炼器术",
+    "evidence": "“玄天炼器术”",
+    "source_path": "data/fanren/raw/ch_1640_第九卷 灵界百族_第一千六百三十九章 玄天炼器术.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "guimi/ch_0521",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_0521_第三部 旅行家_第三十六章 人之将死_tara5_v1.json",
+    "fact": "克莱恩在白玛瑙号上告知达尼兹已经自由了",
+    "evidence": "“你自由了。”",
+    "source_path": "data/guimi/raw/ch_0520_第三部 旅行家_第三十五章 慷慨之城.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "guimi/ch_0874",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_0874_第四部 不死者_第一百三十八章 直击内心的问题_tara5_v1.json",
+    "fact": "阿尔杰对戴里克打探情报的表现予以认可。",
+    "evidence": "“做得不错。”",
+    "source_path": "data/guimi/raw/ch_0873_第四部 不死者_第一百三十七章 检举他！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "guimi/ch_1121",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_1121_第五部 红祭司_第一百七十章 熟悉的注视_tara5_v1.json",
+    "fact": "洛薇雅召出银色骑士身影打量后表示什么都没有",
+    "evidence": "“什么都没有。”",
+    "source_path": "data/guimi/raw/ch_1120_第五部 红祭司_第一百六十九章 王庭内部.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "guimi/ch_1220",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_1220_第六部 逐光者_第六十四章 声音_tara5_v1.json",
+    "fact": "月城大祭司尼姆曾亲自使用过相关灵性材料。",
+    "evidence": "“用过。”",
+    "source_path": "data/guimi/raw/ch_1219_第六部 逐光者_第六十三章 永恒不变的迷雾.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "guimi/ch_1388",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/guimi/ch_1388_第八部 愚者_第二十七章 一个奇迹_tara5_v1.json",
+    "fact": "历史迷雾包容非凡特性聚合为愚者魔药。",
+    "evidence": "“愚者”魔药！",
+    "source_path": "data/guimi/raw/ch_1387_第八部 愚者_第二十六章 联手.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_0045",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_0045_第四十六章 盗天机_tara5_v1.json",
+    "fact": "赵旭河向吕阳提及了一门筑基秘术。",
+    "evidence": "“筑基秘术？”",
+    "source_path": "data/momen/raw/ch_0044_第四十五章 福星.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_0536",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_0536_第五百三十八章 天下第一_tara5_v1.json",
+    "fact": "吕阳心中思量是否要在此时求取金位",
+    "evidence": "‘要求金吗？",
+    "source_path": "data/momen/raw/ch_0535_第五百三十七章 焕明废释，真武荡魔！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_0546",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_0546_第五百四十八章 四大道主伺候我一个_tara5_v1.json",
+    "fact": "飞雪真君断言吕阳若此时求金虽有九成胜算但必死无疑。",
+    "evidence": "“但是必死无疑！”",
+    "source_path": "data/momen/raw/ch_0545_第五百四十七章 你若现在求金.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_0586",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_0586_第五百八十八章 飞雪突破真君五等_tara5_v1.json",
+    "fact": "选择洞天挂靠会导致道途断绝",
+    "evidence": "坏处则是道途已绝。",
+    "source_path": "data/momen/raw/ch_0585_第五百八十七章 大劫隐秘.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_1176",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_1176_第一千一百七十八章 得道者多助_tara5_v1.json",
+    "fact": "吕阳显化出天历数道果落于曲直面前",
+    "evidence": "【天历数】。",
+    "source_path": "data/momen/raw/ch_1175_第一千一百七十七章 证个始终.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_1186",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_1186_第一千一百八十八章 举手_tara5_v1.json",
+    "fact": "吕阳感知到祖师突破成功并大感惊喜。",
+    "evidence": "‘祖师.成了！",
+    "source_path": "data/momen/raw/ch_1185_第一千一百八十七章 世尊的秘密.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_1226",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_1226_第一千二百二十八章 见司祟_tara5_v1.json",
+    "fact": "司祟的气机伫立在漆黑漩涡内",
+    "evidence": "司祟，就在里面。",
+    "source_path": "data/momen/raw/ch_1225_第一千二百二十七章 寻踪.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "momen/ch_1296",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/momen/ch_1296_第一千二百九十八章 道不同不相为谋_tara5_v1.json",
+    "fact": "司祟成为光海史上的第二位超脱者兼太极道主。",
+    "evidence": "太极道主，司祟！",
+    "source_path": "data/momen/raw/ch_1295_第一千二百九十七章 太极道主！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shaosong/ch_0026",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shaosong/ch_0026_第一卷_第24章三万之约_tara5_v1.json",
+    "fact": "赵玖严肃发问张俊淮河能否防守，表明自己不想再逃跑。",
+    "evidence": "朕委实不想跑了！”",
+    "source_path": "data/shaosong/raw/ch_0025_第一卷_第23章：荣辱.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shaosong/ch_0065",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shaosong/ch_0065_第一卷_第63章廿八上_tara5_v1.json",
+    "fact": "岳飞同意了张荣关于引诱金人的时间要求",
+    "evidence": "“可以。”",
+    "source_path": "data/shaosong/raw/ch_0064_第一卷_第62章：五日.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shaosong/ch_0335",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shaosong/ch_0335_第五卷_第6章交易_tara5_v1.json",
+    "fact": "赵玖在酒席间突然向张俊询问张宗颜之事",
+    "evidence": "赵玖忽然扭头发问。",
+    "source_path": "data/shaosong/raw/ch_0334_第五卷_第5章：赴宴.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_0146",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_0146_第二卷 我到底是人还是鬼_第一百四十五章 会议安排_tara5_v1.json",
+    "fact": "杨间用手枪威慑保镖后收起枪",
+    "evidence": "杨间收起手枪。",
+    "source_path": "data/shenmi/raw/ch_0145_第二卷 我到底是人还是鬼？_第一百四十四章 残忍的现实.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_0416",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_0416_第二卷 我到底是人还是鬼_第四百十五章 食鬼者张雷_tara5_v1.json",
+    "fact": "杨间准备入住的酒店名为平安大酒店。",
+    "evidence": "平安大酒店！",
+    "source_path": "data/shenmi/raw/ch_0415_第二卷 我到底是人还是鬼？_第四百十四章 你是个好人.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_0456",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_0456_第二卷 我到底是人还是鬼_第四百五十五章 一丝希望_tara5_v1.json",
+    "fact": "杨间从行李袋中拿出了一根白色的蜡烛。",
+    "evidence": "一根白色的蜡烛。",
+    "source_path": "data/shenmi/raw/ch_0455_第二卷 我到底是人还是鬼？_第四百五十四章 危险的方法.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_0496",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_0496_第二卷 我到底是人还是鬼_第四百九十三章 无法驾驭_tara5_v1.json",
+    "fact": "杨间对高志强的鬼感到惊叹并认为其对驭鬼者有利。",
+    "evidence": "杨间心中惊叹。",
+    "source_path": "data/shenmi/raw/ch_0495_第二卷 我到底是人还是鬼？_第四百九十二章 不可思议的鬼.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_0947",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_0947_第三卷 此世乃无间_第九百一十五章 最可怕的熄火_tara5_v1.json",
+    "fact": "公交车在三四站之间面临熄火或鬼拦车的凶险。",
+    "evidence": "熄火还有鬼拦车。",
+    "source_path": "data/shenmi/raw/ch_0946_第三卷 此世乃无间_第九百一十四章 下雨的车站.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_0968",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_0968_第三卷 此世乃无间_第九百三十五章 米饭_tara5_v1.json",
+    "fact": "李阳提灯笼接应众人后所有人聚在一起",
+    "evidence": "所有人聚在一起。",
+    "source_path": "data/shenmi/raw/ch_0967_第三卷 此世乃无间_第九百三十四章 顺利纠正.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_1068",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_1068_第三卷 此世乃无间_第一千零三十五章 真有问题_tara5_v1.json",
+    "fact": "苗小善提议大家一起去开灯更安全。",
+    "evidence": "苗小善说道。",
+    "source_path": "data/shenmi/raw/ch_1067_第三卷 此世乃无间_第一千零三十四章 误会还是巧合.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "shenmi/ch_1158",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/shenmi/ch_1158_第三卷 此世乃无间_第一千一百二十五章 颠覆认知_tara5_v1.json",
+    "fact": "何老板强势回应并准备对付杨间",
+    "evidence": "何老板强势回应。",
+    "source_path": "data/shenmi/raw/ch_1157_第三卷 此世乃无间_第一千一百二十四章 707门牌号.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "wenjian/ch_0058",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/wenjian/ch_0058_第五十六章 熊氏熊寨_tara5_v1.json",
+    "fact": "照顾李长寿的粗犷少女见李长寿苏醒并称其为仙人",
+    "evidence": "仙人你咋醒了！”",
+    "source_path": "data/wenjian/raw/ch_0057_第五十五章 师兄南海漂流记.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "wenjian/ch_0459",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/wenjian/ch_0459_第四百五十七章 太清观中拜太清_tara5_v1.json",
+    "fact": "太清道韵在李长寿心底凝成“太清”二字",
+    "evidence": "【太清】",
+    "source_path": "data/wenjian/raw/ch_0458_第四百五十六章 来自【太清】的召唤！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "wenjian/ch_0709",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/wenjian/ch_0709_第七百零七章 今日起洪荒只有五圣_tara5_v1.json",
+    "fact": "李长寿燃烧元神之力、元神与玄体精血。",
+    "evidence": "燃玄体精血。",
+    "source_path": "data/wenjian/raw/ch_0708_第七百零六章 弑圣者：寿.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_0317",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_0317_第四卷 风卷残云_第315章 转世重生_tara5_v1.json",
+    "fact": "王林在巨掌再度落下时大吼呼唤本尊",
+    "evidence": "！”王林大吼。",
+    "source_path": "data/xianni/raw/ch_0316_第四卷 风卷残云_第314章 李慕婉.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_0398",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_0398_第五卷 修星之晶_第396章 乾风_tara5_v1.json",
+    "fact": "王林认出了眼前之人正是乾风",
+    "evidence": "“乾风！”",
+    "source_path": "data/xianni/raw/ch_0397_第五卷 修星之晶_第395章 二代朱雀？司徒南？.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_0630",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_0630_第六卷 初入天运_第628章 强大的傀儡_tara5_v1.json",
+    "fact": "仙卫是仙帝青霖模仿古神制作出的人体法宝。",
+    "evidence": "这，便是仙卫！",
+    "source_path": "data/xianni/raw/ch_0629_第六卷 初入天运_第627章 炼制仙卫.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_0730",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_0730_第七卷 名震罗云_第728章 因果_tara5_v1.json",
+    "fact": "血祖借阵法凝聚出血色虚影降临并扬言找王林。",
+    "evidence": "血祖！",
+    "source_path": "data/xianni/raw/ch_0729_第七卷 名震罗云_第727章 血祖来临.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_1087",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1087_第八卷 联盟隐秘_第1085章 拓森_tara5_v1.json",
+    "fact": "天运子现身于蛮荒星，唤出雨鼎并声称王林逃不出其算计。",
+    "evidence": "天运子！",
+    "source_path": "data/xianni/raw/ch_1086_第八卷 联盟隐秘_第1084章 雨界再开！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_1389",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1389_第九卷 云海之巅_第1387章 天逆之变_tara5_v1.json",
+    "fact": "王林完成了朱雀第四次觉醒。",
+    "evidence": "朱雀四次觉醒，成！",
+    "source_path": "data/xianni/raw/ch_1388_第九卷 云海之巅_第1386章 九色归一！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_1498",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1498_第十卷 叱咤界内_第1496章 三道封印_tara5_v1.json",
+    "fact": "云海修士临死前呼喊云海荣耀",
+    "evidence": "“云海荣耀！”",
+    "source_path": "data/xianni/raw/ch_1497_第十卷 叱咤界内_第1495章 此衫，非衫.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianni/ch_1903",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianni/ch_1903_第十二卷 仙罡第十阳_第1901章 天尊涅_tara5_v1.json",
+    "fact": "王林决定亲自前往天尊涅之地探查",
+    "evidence": "“应该去看看！”",
+    "source_path": "data/xianni/raw/ch_1902_第十二卷 仙罡第十阳_第1900章 五十年！.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0055",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0055_第五十四章 溃散_tara5_v1.json",
+    "fact": "坤图提议杀了惑乱军心的袁铭。",
+    "evidence": "坤图适时提议。",
+    "source_path": "data/xianzhe/raw/ch_0054_第五十三章 魂力.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0055",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0055_第五十四章 溃散_tara5_v1.json",
+    "fact": "央婵附和坤图，主张杀死袁铭。",
+    "evidence": "央婵跟着说道。",
+    "source_path": "data/xianzhe/raw/ch_0054_第五十三章 魂力.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0125",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0125_第一百二十四章 香作坊_tara5_v1.json",
+    "fact": "袁铭因买不到香，特地来找香烛店老者碰运气分辨",
+    "evidence": "袁铭如此说道。",
+    "source_path": "data/xianzhe/raw/ch_0124_第一百二十三章 试百香.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0155",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0155_第一百五十四章 摄魂铃_tara5_v1.json",
+    "fact": "袁铭对黑影报出鬼市暗语“寻火”以示买东西。",
+    "evidence": "袁铭说道。",
+    "source_path": "data/xianzhe/raw/ch_0154_第一百五十三章 鬼市.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0425",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0425_第四百二十四章 海外之谜_tara5_v1.json",
+    "fact": "器灵因算盘落空而对修罗上人极为恼恨",
+    "evidence": "器灵心中大恨。",
+    "source_path": "data/xianzhe/raw/ch_0424_第四百二十三章 该死的修罗老鬼.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0824",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0824_第八百二十三章 各取所需_tara5_v1.json",
+    "fact": "云罗仙子明确表示不会给袁铭剩余半部秘典",
+    "evidence": "“当然不会！”",
+    "source_path": "data/xianzhe/raw/ch_0823_第八百二十二章 指点明路.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0854",
+    "field": "confirmed_facts[0]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0854_第八百五十三章 风波_tara5_v1.json",
+    "fact": "袁铭在万货仙行中发现了一块体型巨大的聚灵之石。",
+    "evidence": "“聚灵之石！",
+    "source_path": "data/xianzhe/raw/ch_0853_第八百五十二章 三大家族.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  },
+  {
+    "key": "xianzhe/ch_0934",
+    "field": "confirmed_facts[1]",
+    "candidate": "output/cleaning-repair-2026-10-24/candidates/xianzhe/ch_0934_第九百三十三章 三界图谋_tara5_v1.json",
+    "fact": "袁铭向炎狼王询问众人突然离开的原因",
+    "evidence": "袁铭问道。",
+    "source_path": "data/xianzhe/raw/ch_0933_第九百三十二章 开心的事情.txt",
+    "source_scope": "previous_chapter",
+    "status": "needs_semantic_review"
+  }
+]

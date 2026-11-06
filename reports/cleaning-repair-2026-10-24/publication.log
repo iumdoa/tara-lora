@@ -1,0 +1,106 @@
+{
+  "original_chapters": 2505,
+  "approved_chapters": 702,
+  "quarantined_chapters": 1803,
+  "pending_service_chapters": 1672,
+  "all_samples": 3510,
+  "ready_samples": 3500,
+  "long_context_samples": 10,
+  "max_tokens": 2560,
+  "longest": 3354,
+  "by_task": {
+    "tara5_aftershock": {
+      "ready": 699,
+      "long_context": 3
+    },
+    "tara5_cliffhanger": {
+      "ready": 701,
+      "long_context": 1
+    },
+    "tara5_climax": {
+      "ready": 697,
+      "long_context": 5
+    },
+    "tara5_opening": {
+      "ready": 702
+    },
+    "tara5_ramp_up": {
+      "ready": 701,
+      "long_context": 1
+    }
+  },
+  "by_book": {
+    "bailian": {
+      "chapters": 387,
+      "samples": 1935
+    },
+    "changsheng": {
+      "chapters": 150,
+      "samples": 750
+    },
+    "chongsheng": {
+      "chapters": 79,
+      "samples": 395
+    },
+    "dafeng": {
+      "chapters": 72,
+      "samples": 360
+    },
+    "daomu": {
+      "chapters": 13,
+      "samples": 65
+    },
+    "xianni": {
+      "chapters": 1,
+      "samples": 5
+    },
+    "dawang": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "doupo": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "fanren": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "guimi": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "maoxianwu": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "momen": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "shaosong": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "shenmi": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "wenjian": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "xianzhe": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "xiuxian": {
+      "chapters": 0,
+      "samples": 0
+    },
+    "yaowu": {
+      "chapters": 0,
+      "samples": 0
+    }
+  }
+}

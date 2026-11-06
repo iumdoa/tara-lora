@@ -1,0 +1,118 @@
+{
+  "original_chapters": 3226,
+  "approved_chapters": 3198,
+  "quarantined_chapters": 28,
+  "pending_service_chapters": 0,
+  "all_samples": 15990,
+  "ready_samples": 15893,
+  "long_context_samples": 97,
+  "max_tokens": 2560,
+  "longest": 4596,
+  "by_task": {
+    "tara5_aftershock": {
+      "ready": 3177,
+      "long_context": 21
+    },
+    "tara5_cliffhanger": {
+      "ready": 3197,
+      "long_context": 1
+    },
+    "tara5_climax": {
+      "ready": 3170,
+      "long_context": 28
+    },
+    "tara5_opening": {
+      "ready": 3198
+    },
+    "tara5_ramp_up": {
+      "ready": 3151,
+      "long_context": 47
+    }
+  },
+  "by_book": {
+    "bailian": {
+      "chapters": 421,
+      "samples": 2105
+    },
+    "changsheng": {
+      "chapters": 171,
+      "samples": 855
+    },
+    "chongsheng": {
+      "chapters": 103,
+      "samples": 515
+    },
+    "dafeng": {
+      "chapters": 88,
+      "samples": 440
+    },
+    "daomu": {
+      "chapters": 52,
+      "samples": 260
+    },
+    "dawang": {
+      "chapters": 126,
+      "samples": 630
+    },
+    "doupo": {
+      "chapters": 151,
+      "samples": 755
+    },
+    "fanren": {
+      "chapters": 234,
+      "samples": 1170
+    },
+    "guimi": {
+      "chapters": 131,
+      "samples": 655
+    },
+    "maoxianwu": {
+      "chapters": 72,
+      "samples": 360
+    },
+    "momen": {
+      "chapters": 118,
+      "samples": 590
+    },
+    "shaosong": {
+      "chapters": 40,
+      "samples": 200
+    },
+    "shenmi": {
+      "chapters": 149,
+      "samples": 745
+    },
+    "wenjian": {
+      "chapters": 110,
+      "samples": 550
+    },
+    "xianni": {
+      "chapters": 200,
+      "samples": 1000
+    },
+    "xianzhe": {
+      "chapters": 126,
+      "samples": 630
+    },
+    "xiuxian": {
+      "chapters": 139,
+      "samples": 695
+    },
+    "yaowu": {
+      "chapters": 125,
+      "samples": 625
+    },
+    "zifu": {
+      "chapters": 384,
+      "samples": 1920
+    },
+    "xianjie": {
+      "chapters": 140,
+      "samples": 700
+    },
+    "mixian": {
+      "chapters": 118,
+      "samples": 590
+    }
+  }
+}

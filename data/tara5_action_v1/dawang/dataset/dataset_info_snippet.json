@@ -1,5 +1,13 @@
 {
-  "tara5_action_v1_dawang": {
+  "tara5_dawang_ready_2560": {
+    "file_name": "tara5_action_v1_ready_2560.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+  },
+  "tara5_dawang_full": {
     "file_name": "tara5_action_v1_train.json",
     "formatting": "sharegpt",
     "columns": {
